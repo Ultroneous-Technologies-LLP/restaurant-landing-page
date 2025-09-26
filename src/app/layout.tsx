@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Jomolhari } from "next/font/google";
 import localFont from "next/font/local";
 
-import "./globals.css";
+import { Header } from "@/components/layout";
 
 const proximaNova = localFont({
   src: [
@@ -79,6 +79,7 @@ export default function RootLayout({
       <body
         className={`${jomolHari.variable} ${inter.variable} ${proximaNova.variable} ${eugusto.variable} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
