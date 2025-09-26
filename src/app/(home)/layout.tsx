@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { eugusto, inter, jomolHari, proximaNova } from "@/constants";
+import { Header } from "@/components/layout";
 
 import "../../styles/globals.css";
 
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body
         className={`${jomolHari.variable} ${inter.variable} ${proximaNova.variable} ${eugusto.variable} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
