@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+
+@theme inline {
+
+  --font-JomolHari: var(--font-JomolHari);
+  --font-inter:var(--font-inter);
+  --font-proximaNova: var(--font-proximaNova);
+  --font-eugusto:var(--font-eugusto)
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
