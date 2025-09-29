@@ -1,7 +1,11 @@
-const Home = () => (
-  <div className="text-center text-5xl mt-20">
-    <h1 className="font-JomolHari">Welcome to Restaurant Landing Page</h1>
-  </div>
-);
+import { Hero } from "@/components/home";
+import data from "@/content/home-page-layout.json";
+
+import { homePageProps } from "./types";
+
+const Home = () => {
+  const { heroSection }: homePageProps = data;
+  return <Hero {...heroSection} />;
+};
 
 export default Home;

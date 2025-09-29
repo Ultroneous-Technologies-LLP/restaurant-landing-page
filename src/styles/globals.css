@@ -5,6 +5,8 @@
   --font-inter: var(--font-inter);
   --font-proximaNova: var(--font-proximaNova);
   --font-eugusto: var(--font-eugusto);
+
+  --animate-spin-slow: spin-slow 3s linear infinite;
 }
 
 body {
@@ -17,4 +19,10 @@ a,
 input,
 textarea {
   cursor: url("/cursor.svg"), pointer;
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
 }

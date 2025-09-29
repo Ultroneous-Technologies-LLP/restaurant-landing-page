@@ -5,7 +5,7 @@ import { eugusto, inter, jomolHari, proximaNova } from "@/constants";
 import { Footer, Header, SocialIconNameType } from "@/components/layout";
 
 import "../../styles/globals.css";
-import { layoutDataType } from "./types";
+import { LayoutProps } from "./types";
 
 export const metadata: Metadata = {
   title: "Restaurant Website Design | Modern Food & Dining UI Concept",
@@ -36,7 +36,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { footer }: layoutDataType = {
+  const { footer }: LayoutProps = {
     footer: {
       ...data.footer,
       socialLinks: data.footer.socialLinks.map((link) => ({

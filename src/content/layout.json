@@ -1,6 +1,7 @@
 {
   "footer": {
     "icon": {
+      "id": 1,
       "src": "/assets/icons/emoji.svg",
       "alt": "emoji"
     },
