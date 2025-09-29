@@ -9,4 +9,12 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  cursor: auto;
+}
+
+button,
+a,
+input,
+textarea {
+  cursor: url("/cursor.svg"), pointer;
 }

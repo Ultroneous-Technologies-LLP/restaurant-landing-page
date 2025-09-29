@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Jomolhari } from "next/font/google";
 import localFont from "next/font/local";
+import { Inter, Jomolhari } from "next/font/google";
 
-import { Header } from "@/components/layout";
+import data from "@/content/layout.json";
+import { Footer, Header } from "@/components/layout";
+import { layoutDataType, SocialIconName } from "@/components/layout/types";
+
+import "./globals.css";
 
 const proximaNova = localFont({
   src: [
@@ -74,6 +78,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { footer }: layoutDataType = {
+    footer: {
+      ...data.footer,
+      socialLinks: data.footer.socialLinks.map((link) => ({
+        ...link,
+        // Assert type safely
+        icon: link.icon as SocialIconName,
+      })),
+    },
+  };
+
   return (
     <html lang="en">
       <body
@@ -81,6 +96,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer {...footer} />
       </body>
     </html>
   );

@@ -1,0 +1,56 @@
+{
+  "footer": {
+    "icon": {
+      "src": "/assets/icons/emoji.svg",
+      "alt": "emoji"
+    },
+    "navLinks": [
+      {
+        "id": 1,
+        "links": "/#home",
+        "title": "Home"
+      },
+      {
+        "id": 2,
+        "links": "/#menu",
+        "title": "Menu"
+      },
+      {
+        "id": 3,
+        "links": "/#blog",
+        "title": "Blog"
+      },
+      {
+        "id": 4,
+        "links": "/#contact",
+        "title": "Contact"
+      }
+    ],
+    "socialLinks": [
+      {
+        "id": 1,
+        "href": "https://dribbble.com",
+        "label": "Visit our Dribbble profile",
+        "icon": "Dribble"
+      },
+      {
+        "id": 2,
+        "href": "https://instagram.com",
+        "label": "Visit our Instagram profile",
+        "icon": "Instagram"
+      },
+      {
+        "id": 3,
+        "href": "https://behance.net",
+        "label": "Visit our Behance profile",
+        "icon": "BeHance"
+      },
+      {
+        "id": 4,
+        "href": "https://linkedin.com",
+        "label": "Visit our LinkedIn profile",
+        "icon": "LinkedIn"
+      }
+    ]
+  }
+}
