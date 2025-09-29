@@ -1,0 +1,39 @@
+{
+  "heroSection": {
+    "backgroundImage": {
+      "desktopImage": {
+        "src": "/assets/images/bg-hero.avif"
+      },
+      "tabImage": {
+        "src": "/assets/images/bg-hero-tablet.avif"
+      },
+      "mobileImage": {
+        "src": "/assets/images/bg-hero-mobile.avif"
+      },
+      "alt": "Hero Background"
+    },
+    "heading": "Bringing Class to cuisine",
+    "description": "Keep it concise and appealing, providing a glimpse of what makes your establishment unique.",
+    "chefs": [
+      { "id": 1, "src": "/assets/images/chef-1.avif", "alt": "Chef 1" },
+      { "id": 2, "src": "/assets/images/chef-2.avif", "alt": "Chef 2" },
+      { "id": 3, "src": "/assets/images/chef-3.avif", "alt": "Chef 3" }
+    ],
+    "extraChefCount": 4,
+    "storyImage": {
+      "id": 1,
+      "src": "/assets/images/our-story.avif",
+      "alt": "Our Story"
+    },
+    "bottomImage": {
+      "id": 1,
+      "src": "/assets/images/food-sushi.avif",
+      "alt": "Food"
+    },
+    "menuImage": {
+      "id": 1,
+      "src": "/assets/icons/explore-our-menu.svg",
+      "alt": "Explore Our Menu"
+    }
+  }
+}

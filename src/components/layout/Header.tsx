@@ -27,7 +27,7 @@ export const Header: FC = () => {
       aria-label="Main Navigation"
     >
       <Container className="flex justify-between items-center px-4 py-2 md:pl-8 md:pr-11.5 xl:py-8 xl:pr-17 xl:pl-18">
-        <p className="font-JomolHari text-2xl/6 md:text-3xl/6.5 xl:text-[40px]/10 text-black">
+        <p className="font-JomolHari text-base/4 md:text-3xl/6.5 xl:text-[40px]/10 text-black">
           <span>FODO</span>
         </p>
         <button
