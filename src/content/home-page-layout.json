@@ -1,0 +1,43 @@
+{
+  "heroSection": {
+    "backgroundImage": {
+      "desktopImage": {
+        "src": "/assets/images/hero/bg-hero.avif"
+      },
+      "tabImage": {
+        "src": "/assets/images/hero/bg-hero-tablet.avif"
+      },
+      "mobileImage": {
+        "src": "/assets/images/hero/bg-hero-mobile.avif"
+      },
+      "alt": "Hero Background"
+    },
+    "heading": "Bringing Class to cuisine",
+    "description": "Keep it concise and appealing, providing a glimpse of what makes your establishment unique.",
+    "chefs": [
+      { "id": 1, "src": "/assets/images/hero/chef-1.avif", "alt": "Chef 1" },
+      { "id": 2, "src": "/assets/images/hero/chef-2.avif", "alt": "Chef 2" },
+      { "id": 3, "src": "/assets/images/hero/chef-3.avif", "alt": "Chef 3" }
+    ],
+    "extraChefCount": 4,
+    "storyImage": {
+      "id": 1,
+      "src": "/assets/images/hero/our-story.avif",
+      "alt": "Our Story"
+    },
+    "bottomImage": {
+      "id": 1,
+      "src": "/assets/images/hero/food-sushi.avif",
+      "alt": "Food"
+    },
+    "menuImage": {
+      "id": 1,
+      "src": "/assets/icons/explore-our-menu.svg",
+      "alt": "Explore Our Menu"
+    },
+    "button": {
+      "label": "Make a Reservation",
+      "link": "/"
+    }
+  }
+}
