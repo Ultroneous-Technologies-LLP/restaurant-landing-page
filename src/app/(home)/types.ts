@@ -1,5 +1,5 @@
-import { FooterProps } from "@/components/layout";
 import { HeroSectionProps } from "@/components/home";
+import { FooterProps } from "@/components/layout";
 
 export interface LayoutProps {
   footer: FooterProps;
