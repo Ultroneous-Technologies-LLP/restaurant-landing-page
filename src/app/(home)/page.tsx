@@ -1,11 +1,16 @@
-import { Hero } from "@/components/home";
+import { EatingWell, Hero } from "@/components/home";
 import data from "@/content/home-page-layout.json";
 
 import { homePageProps } from "./types";
 
 const Home = () => {
-  const { heroSection }: homePageProps = data;
-  return <Hero {...heroSection} />;
+  const { heroSection, eatingWellSection }: homePageProps = data;
+  return (
+    <>
+      <Hero {...heroSection} />;
+      <EatingWell {...eatingWellSection} />;
+    </>
+  );
 };
 
 export default Home;
