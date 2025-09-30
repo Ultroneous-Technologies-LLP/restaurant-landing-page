@@ -35,5 +35,47 @@
       "src": "/assets/icons/explore-our-menu.svg",
       "alt": "Explore Our Menu"
     }
+  },
+  "eatingWellSection": {
+    "images": {
+      "food1": {
+        "id": 1,
+        "src": "/assets/images/food-1.avif",
+        "alt": "Fresh salad bowl"
+      },
+      "food2": {
+        "id": 2,
+        "src": "/assets/images/food-2.avif",
+        "alt": "Healthy breakfast"
+      }
+    },
+    "heading": "Living well Begins with Eating Well",
+    "description": "Duis nec semper ligula. Nullam nec justo vel metus gravida consequat. Suspendisse potenti. Quisque fermentum, nisl vitae auctor commodo, justo metus tincidunt elit.",
+    "cards": [
+      {
+        "id": 1,
+        "icon": {
+          "id": 1,
+          "src": "/assets/icons/online-oder.svg",
+          "alt": "Online order icon"
+        },
+        "title": "Online Order",
+        "description": "Duis nec semper ligula. Nullam nec."
+      },
+      {
+        "id": 2,
+        "icon": {
+          "id": 1,
+          "src": "/assets/icons/services.svg",
+          "alt": "Service icon"
+        },
+        "title": "24/7 Services",
+        "description": "Duis nec semper ligula. Nullam nec."
+      }
+    ],
+    "cta": {
+      "label": "Book Now",
+      "href": "/"
+    }
   }
 }

@@ -87,7 +87,7 @@ export const Hero: FC<HeroData> = ({
             </div>
           </div>
         </div>
-        <div>
+        <div className="mx-auto">
           <div className="relative w-fit xl:w-full mx-auto md:w-73.5 lg:w-100">
             <Image
               src={storyImage.src}
