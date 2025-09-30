@@ -3,3 +3,8 @@ export interface ImageTypes {
   src: string;
   alt: string;
 }
+
+export interface CtaButtonType {
+  label: string;
+  href: string;
+}
