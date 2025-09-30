@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, JSX, ReactElement } from "react";
+import { ComponentPropsWithoutRef, JSX, ReactElement, ReactNode } from "react";
 
 export type SupportedTags = Extract<
   keyof JSX.IntrinsicElements,
@@ -8,7 +8,7 @@ export type SupportedTags = Extract<
 export type ContainerProps<T extends SupportedTags> = {
   as?: T;
   backgroundClassName?: string;
-  children: ReactElement | ReactElement[];
+  children: ReactNode | ReactElement[];
   className?: string;
   id?: string;
 } & ComponentPropsWithoutRef<T>;

@@ -13,6 +13,11 @@ interface Src {
   src: string;
 }
 
+interface Circle {
+  image: image;
+  circleText: string;
+}
+
 export interface HeroData {
   backgroundImage: {
     desktopImage: Src;
@@ -47,7 +52,15 @@ export interface EatingWellData {
   cta: Cta;
 }
 
+export interface QualityComesData {
+  backgroundImage: image;
+  heading: string;
+  description: string;
+  circle: Circle;
+}
+
 export interface homeLayoutTypes {
   heroSection: HeroData;
   eatingWellSection: EatingWellData;
+  qualityComesSection:QualityComesData
 }
