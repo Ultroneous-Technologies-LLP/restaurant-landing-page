@@ -1,12 +1,18 @@
 import data from "@/content/home-page-layout.json";
 import { homeLayoutTypes } from "@/components/home/types";
-import { EatingWell, Hero, QualityComes } from "@/components/home";
+import {
+  EatingWell,
+  Hero,
+  MostPopularDishes,
+  QualityComes,
+} from "@/components/home";
 
 const Home = () => {
   const {
     heroSection,
     eatingWellSection,
     qualityComesSection,
+    mostPopularDishesSection,
   }: homeLayoutTypes = data;
 
   return (
@@ -14,6 +20,7 @@ const Home = () => {
       <Hero {...heroSection} />
       <EatingWell {...eatingWellSection} />
       <QualityComes {...qualityComesSection} />
+      <MostPopularDishes {...mostPopularDishesSection} />
     </>
   );
 };

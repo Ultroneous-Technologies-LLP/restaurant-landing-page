@@ -18,7 +18,7 @@ body {
 button,
 a,
 input,
-textarea {
+textarea,svg {
   cursor: url("/cursor.svg"), pointer;
 }
 
