@@ -59,8 +59,24 @@ export interface QualityComesData {
   circle: Circle;
 }
 
+export interface Dish {
+  id: number;
+  title: string;
+  description: string;
+  price: string;
+  image: string;
+  alt: string;
+}
+
+export interface MostPopularDishesData {
+  title: string;
+  dishes: Dish[];
+  cta: Cta;
+}
+
 export interface homeLayoutTypes {
   heroSection: HeroData;
   eatingWellSection: EatingWellData;
-  qualityComesSection:QualityComesData
+  qualityComesSection: QualityComesData
+  mostPopularDishesSection:MostPopularDishesData
 }
