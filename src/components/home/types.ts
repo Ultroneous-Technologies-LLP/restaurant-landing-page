@@ -91,11 +91,38 @@ export interface ExtraordinaryExperienceData {
   items: ExperienceItem[];
   video: VideoData;
 }
+interface TabItem {
+  id: number;
+  title: string;
+  description: string;
+  price: string;
+}
+
+interface TabContent {
+  image: image;
+  items: TabItem[];
+}
+
+export interface TabType {
+  id: number;
+  label: string;
+  content: TabContent;
+}
+
+export interface TabProps {
+  tabs: TabType[];
+}
+
+export interface OurSpecialMenuSection {
+  title: string;
+  tabs: TabType[];
+}
 
 export interface homeLayoutTypes {
   heroSection: HeroData;
   eatingWellSection: EatingWellData;
-  qualityComesSection: QualityComesData;
-  mostPopularDishesSection: MostPopularDishesData;
   extraordinaryExperienceSection: ExtraordinaryExperienceData;
+  qualityComesSection: QualityComesData
+  mostPopularDishesSection: MostPopularDishesData
+  ourSpecialMenuSection:OurSpecialMenuSection
 }

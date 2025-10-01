@@ -25,6 +25,11 @@ svg {
   cursor: url("/cursor.svg"), pointer;
 }
 
+
+.hidden-scroll-bar::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
+
 @keyframes spin-slow {
   to {
     transform: rotate(360deg);
