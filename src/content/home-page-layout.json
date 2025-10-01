@@ -157,5 +157,38 @@
       },
       "circleText": "Talented Chef • Talented Chef • Talented Chef • Talented Chef • Talented Chef • Talented Chef • Talented Chef •"
     }
+  },
+  "mostPopularDishesSection": {
+    "title": "Most Popular Dishes",
+    "dishes": [
+      {
+        "id": 1,
+        "title": "Risotto",
+        "description": "Duis nec semper ligula. Nullam nec justo vel metus gravida consequat.",
+        "price": "$30.00",
+        "image": "/assets/images/food-risotto.avif",
+        "alt": ""
+      },
+      {
+        "id": 2,
+        "title": "Polenta",
+        "description": "Duis nec semper ligula. Nullam nec justo vel metus gravida consequat.",
+        "price": "$30.00",
+        "image": "/assets/images/food-polenta.avif",
+        "alt": ""
+      },
+      {
+        "id": 3,
+        "title": "Truffles",
+        "description": "Duis nec semper ligula. Nullam nec justo vel metus gravida consequat.",
+        "price": "$30.00",
+        "image": "/assets/images/food-truffles.avif",
+        "alt": ""
+      }
+    ],
+    "cta": {
+      "label": "View More",
+      "href": "/"
+    }
   }
 }
