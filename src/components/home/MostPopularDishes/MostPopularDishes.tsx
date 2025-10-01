@@ -61,7 +61,7 @@ export const MostPopularDishes: FC<MostPopularDishesData> = ({
               <span>{price}</span>
             </p>
             <div
-              className="cursor-pointer size-12 xl:size-13.5 rounded-full flex justify-center items-center bg-black hover:bg-[#E83C2A] transition-colors duration-500 ease-in-out absolute 
+              className="cursor-pointer size-12 xl:size-13.5 rounded-full flex justify-center items-center bg-black hover:bg-primary-red transition-colors duration-500 ease-in-out absolute 
             xl:bottom-2.5 xl:right-2.5 bottom-1 right-3"
             >
               <Cart className="text-white" />

@@ -6,6 +6,8 @@
   --font-proximaNova: var(--font-proximaNova);
   --font-eugusto: var(--font-eugusto);
 
+  --color-primary-red: #e83c2a;
+
   --animate-spin-slow: spin-slow 3s linear infinite;
   --animate-spin-15s: spin-slow 15s linear infinite;
 }
@@ -18,7 +20,8 @@ body {
 button,
 a,
 input,
-textarea,svg {
+textarea,
+svg {
   cursor: url("/cursor.svg"), pointer;
 }
 

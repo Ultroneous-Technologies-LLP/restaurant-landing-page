@@ -74,9 +74,28 @@ export interface MostPopularDishesData {
   cta: Cta;
 }
 
+interface ExperienceItem {
+  id: number;
+  title: string;
+  description: string;
+}
+
+export interface VideoData {
+  src: string;
+  poster: string;
+  alt: string;
+}
+
+export interface ExtraordinaryExperienceData {
+  title: string;
+  items: ExperienceItem[];
+  video: VideoData;
+}
+
 export interface homeLayoutTypes {
   heroSection: HeroData;
   eatingWellSection: EatingWellData;
-  qualityComesSection: QualityComesData
-  mostPopularDishesSection:MostPopularDishesData
+  qualityComesSection: QualityComesData;
+  mostPopularDishesSection: MostPopularDishesData;
+  extraordinaryExperienceSection: ExtraordinaryExperienceData;
 }
