@@ -1,6 +1,7 @@
 import data from "@/content/home-page-layout.json";
 import { homeLayoutTypes } from "@/components/home/types";
 import {
+  AnyPlan,
   EatingWell,
   ExtraordinaryExperience,
   Hero,
@@ -17,6 +18,7 @@ const Home = () => {
     mostPopularDishesSection,
     extraordinaryExperienceSection,
     ourSpecialMenuSection,
+    anyPlanSection,
   }: homeLayoutTypes = data;
 
   return (
@@ -27,6 +29,7 @@ const Home = () => {
       <MostPopularDishes {...mostPopularDishesSection} />
       <ExtraordinaryExperience {...extraordinaryExperienceSection} />
       <OurSpecialMenu {...ourSpecialMenuSection} />
+      <AnyPlan {...anyPlanSection} />
     </>
   );
 };

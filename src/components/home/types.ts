@@ -118,11 +118,30 @@ export interface OurSpecialMenuSection {
   tabs: TabType[];
 }
 
+interface OpeningHours {
+  id: number;
+  day: string;
+  timing: string;
+}
+
+interface OpeningHour {
+  title: string;
+  openingHours: OpeningHours[];
+}
+
+export interface AnyPlanSection {
+  image: image;
+  title: string;
+  openingHour: OpeningHour;
+  button: Cta;
+}
+
 export interface homeLayoutTypes {
   heroSection: HeroData;
   eatingWellSection: EatingWellData;
   extraordinaryExperienceSection: ExtraordinaryExperienceData;
-  qualityComesSection: QualityComesData
-  mostPopularDishesSection: MostPopularDishesData
-  ourSpecialMenuSection:OurSpecialMenuSection
+  qualityComesSection: QualityComesData;
+  mostPopularDishesSection: MostPopularDishesData;
+  ourSpecialMenuSection: OurSpecialMenuSection;
+  anyPlanSection: AnyPlanSection;
 }

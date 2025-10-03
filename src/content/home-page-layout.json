@@ -379,5 +379,37 @@
         }
       }
     ]
+  },
+  "anyPlanSection": {
+    "title": "Do you have any plan for any Party or Events?",
+    "image": {
+      "id": 1,
+      "src": "/assets/images/traditional-newari-momos.avif",
+      "alt": "newari-momos"
+    },
+    "openingHour": {
+      "title": "Our Special Menu",
+      "openingHours": [
+        {
+          "id": 1,
+          "day": "Monday - Saturday",
+          "timing": "10:00am - 11.30pm"
+        },
+        {
+          "id": 2,
+          "day": "Sunday",
+          "timing": "10:00am - 10.00pm"
+        },
+        {
+          "id": 3,
+          "day": "Happy hours",
+          "timing": "5:30am- 9.00pm"
+        }
+      ]
+    },
+    "button": {
+      "label": "Book Entry",
+      "href": "/"
+    }
   }
 }
