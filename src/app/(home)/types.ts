@@ -6,6 +6,7 @@ import {
   MostPopularDishesProps,
   OurSpecialMenuProps,
   QualityComesProps,
+  TestimonialProps,
 } from "@/components/home";
 import { FooterProps } from "@/components/layout";
 
@@ -21,4 +22,5 @@ export interface homePageProps {
   extraordinaryExperienceSection: ExtraordinaryExperienceProps;
   ourSpecialMenuSection: OurSpecialMenuProps;
   anyPlanSection: AnyPlanProps;
+  testimonialsSection: TestimonialProps;
 }

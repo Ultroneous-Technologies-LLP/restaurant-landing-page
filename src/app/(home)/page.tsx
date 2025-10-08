@@ -7,6 +7,7 @@ import {
   MostPopularDishes,
   OurSpecialMenu,
   QualityComes,
+  Testimonials,
 } from "@/components/home";
 
 import { homePageProps } from "./types";
@@ -20,6 +21,7 @@ const Home = () => {
     extraordinaryExperienceSection,
     ourSpecialMenuSection,
     anyPlanSection,
+    testimonialsSection,
   }: homePageProps = data;
   return (
     <>
@@ -30,6 +32,7 @@ const Home = () => {
       <ExtraordinaryExperience {...extraordinaryExperienceSection} />
       <OurSpecialMenu {...ourSpecialMenuSection} />
       <AnyPlan {...anyPlanSection} />
+      <Testimonials {...testimonialsSection} />
     </>
   );
 };
