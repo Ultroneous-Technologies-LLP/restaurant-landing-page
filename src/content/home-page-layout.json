@@ -152,5 +152,232 @@
       "poster": "/assets/images/video-poster.avif",
       "alt": "Demo video"
     }
+  },
+  "ourSpecialMenuSection": {
+    "title": "Our Special Menu",
+    "tabs": [
+      {
+        "id": 1,
+        "label": "Breakfast",
+        "content": {
+          "image": {
+            "id": 1,
+            "src": "/assets/images/tab/breakfast-menu.avif",
+            "alt": "breakfast"
+          },
+          "items": [
+            {
+              "id": 1,
+              "title": "Grill Salmon......................................",
+              "description": "Soft and juice, with garlic & ginger",
+              "price": "$27.50"
+            },
+            {
+              "id": 2,
+              "title": "Coconut Chia Bowl.......................",
+              "description": "Soft and juice, with garlic & ginger",
+              "price": "$27.80"
+            },
+            {
+              "id": 3,
+              "title": "Cassonut Salad..............................",
+              "description": "Soft and juice, with garlic & ginger",
+              "price": "$27.50"
+            },
+            {
+              "id": 4,
+              "title": "Crispy Skin Chicken.....................",
+              "description": "Soft and juice, with garlic & ginger",
+              "price": "$27.80"
+            }
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "label": "Lunch",
+        "content": {
+          "image": {
+            "id": 1,
+            "src": "/assets/images/tab/lunch-menu.avif",
+            "alt": ""
+          },
+          "items": [
+            {
+              "id": 1,
+              "title": "Herb Roasted Chicken......................................",
+              "description": "Served with garlic mash, buttered greens & rich gravy.",
+              "price": "$9.50"
+            },
+            {
+              "id": 2,
+              "title": "Mediterranean Pasta.......................",
+              "description": "Tossed with olives, sun-dried tomatoes, basil pesto & parmesan.",
+              "price": "$8.90"
+            },
+            {
+              "id": 3,
+              "title": "Classic Club Sandwich..............................",
+              "description": "Triple-layered with chicken, bacon, fried egg & fresh greens.",
+              "price": "$7.50"
+            },
+            {
+              "id": 4,
+              "title": "Thai Green Curry.....................",
+              "description": "Aromatic coconut curry with tender chicken & steamed jasmine rice.",
+              "price": "$9.20"
+            }
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "label": "Dinner",
+        "content": {
+          "image": {
+            "id": 1,
+            "src": "/assets/images/tab/dinner-menu.avif",
+            "alt": ""
+          },
+          "items": [
+            {
+              "id": 1,
+              "title": "Beef Tenderloin Steak......................................",
+              "description": "Grilled to perfection with red wine jus & roasted vegetables.",
+              "price": "$15.90"
+            },
+            {
+              "id": 2,
+              "title": "Pan-Seared Salmon.......................",
+              "description": "With lemon butter sauce, sautéed spinach & wild rice.",
+              "price": "$14.50"
+            },
+            {
+              "id": 3,
+              "title": "Mushroom Risotto..............................",
+              "description": "Creamy arborio rice with wild mushrooms & parmesan.",
+              "price": "$12.90"
+            },
+            {
+              "id": 4,
+              "title": "Lamb Chops.....................",
+              "description": "Marinated with rosemary & garlic, served with potato gratin.",
+              "price": "$16.20"
+            }
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "label": "Beverages",
+        "content": {
+          "image": {
+            "id": 1,
+            "src": "/assets/images/tab/beverages-menu.avif",
+            "alt": ""
+          },
+          "items": [
+            {
+              "id": 1,
+              "title": "Freshly Squeezed Orange Juice......................................",
+              "description": "Sun-ripened oranges, cold-pressed for a zesty start.",
+              "price": "$3.50"
+            },
+            {
+              "id": 2,
+              "title": "Iced Caramel Latte.......................",
+              "description": "Perfectly brewed espresso, caramel drizzle, velvety foam.",
+              "price": "$4.20"
+            },
+            {
+              "id": 3,
+              "title": "Herbal Infusion Tea..............................",
+              "description": "A calming blend of chamomile, lemongrass, and mint.",
+              "price": "$2.90"
+            },
+            {
+              "id": 4,
+              "title": "Sparkling Berry Cooler.....................",
+              "description": "Refreshing mix of berries, mint, and soda with a tangy twist.",
+              "price": "$3.90"
+            }
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "label": "Desserts",
+        "content": {
+          "image": {
+            "id": 1,
+            "src": "/assets/images/tab/desserts-menu.avif",
+            "alt": ""
+          },
+          "items": [
+            {
+              "id": 1,
+              "title": "Molten Lava Cake......................................",
+              "description": "Rich chocolate cake with a gooey molten center.",
+              "price": "$5.50"
+            },
+            {
+              "id": 2,
+              "title": "Classic Tiramisu.......................",
+              "description": "Espresso-soaked ladyfingers layered with mascarpone cream.",
+              "price": "$4.80"
+            },
+            {
+              "id": 3,
+              "title": "Seasonal Fruit Tart..............................",
+              "description": "Buttery crust, silky custard, topped with fresh seasonal fruits.",
+              "price": "$4.20"
+            },
+            {
+              "id": 4,
+              "title": "Crème Brûlée.....................",
+              "description": "Silky vanilla custard topped with a caramelized sugar crust.",
+              "price": "$5.20"
+            }
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "label": "Chef’s Specials",
+        "content": {
+          "image": {
+            "id": 1,
+            "src": "/assets/images/tab/chefs-specials-menu.avif",
+            "alt": ""
+          },
+          "items": [
+            {
+              "id": 1,
+              "title": "Grilled Lobster Tail......................................",
+              "description": "Succulent lobster brushed with garlic butter, served with lemon wedges.",
+              "price": "$15.90"
+            },
+            {
+              "id": 2,
+              "title": "Truffle Risotto.......................",
+              "description": "Arborio rice cooked to creamy perfection with shaved truffles.",
+              "price": "$13.50"
+            },
+            {
+              "id": 3,
+              "title": "Slow-Cooked Lamb Shank..............................",
+              "description": "Fall-off-the-bone tender lamb braised in red wine and herbs.",
+              "price": "$14.20"
+            },
+            {
+              "id": 4,
+              "title": "Pan-Seared Duck Breast.....................",
+              "description": "Crispy-skinned duck paired with a rich cherry glaze.",
+              "price": "$16.20"
+            }
+          ]
+        }
+      }
+    ]
   }
 }

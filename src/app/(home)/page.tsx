@@ -4,6 +4,7 @@ import {
   ExtraordinaryExperience,
   Hero,
   MostPopularDishes,
+  OurSpecialMenu,
   QualityComes,
 } from "@/components/home";
 
@@ -16,6 +17,7 @@ const Home = () => {
     qualityComesSection,
     mostPopularDishesSection,
     extraordinaryExperienceSection,
+    ourSpecialMenuSection,
   }: homePageProps = data;
   return (
     <>
@@ -24,6 +26,7 @@ const Home = () => {
       <QualityComes {...qualityComesSection} />
       <MostPopularDishes {...mostPopularDishesSection} />
       <ExtraordinaryExperience {...extraordinaryExperienceSection} />
+      <OurSpecialMenu {...ourSpecialMenuSection} />
     </>
   );
 };
