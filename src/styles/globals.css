@@ -6,6 +6,8 @@
   --font-proximaNova: var(--font-proximaNova);
   --font-eugusto: var(--font-eugusto);
 
+  --color-primary-red: #e83c2a;
+
   --animate-spin-slow: spin-slow 3s linear infinite;
   --animate-spin-15: spin-slow 15s linear infinite;
 }

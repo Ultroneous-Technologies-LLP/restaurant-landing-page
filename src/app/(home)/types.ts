@@ -1,5 +1,6 @@
 import {
   EatingWellProps,
+  ExtraordinaryExperienceProps,
   HeroSectionProps,
   MostPopularDishesProps,
   QualityComesProps,
@@ -15,4 +16,5 @@ export interface homePageProps {
   eatingWellSection: EatingWellProps;
   qualityComesSection: QualityComesProps;
   mostPopularDishesSection: MostPopularDishesProps;
+  extraordinaryExperienceSection:ExtraordinaryExperienceProps
 }

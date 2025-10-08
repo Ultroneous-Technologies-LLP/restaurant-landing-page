@@ -127,5 +127,30 @@
         "alt": ""
       }
     ]
+  },
+  "extraordinaryExperienceSection": {
+    "title": "An Extraordinary Experience for all",
+    "items": [
+      {
+        "id": 1,
+        "title": "Passionate Chef",
+        "description": "Rosoi is one of the most popular Restaurant & Special menu made by our passionate chefs and quality which can impress you"
+      },
+      {
+        "id": 2,
+        "title": "100% Fresh Food",
+        "description": "Rosoi is one of the most popular Restaurant & special menu made by our passionate chefs and quality which can impress you"
+      },
+      {
+        "id": 3,
+        "title": "Memorable Ambience",
+        "description": "Rosoi is one of the most popular Restaurant & special menu made by our passionate chefs and quality which can impress you"
+      }
+    ],
+    "video": {
+      "src": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "poster": "/assets/images/video-poster.avif",
+      "alt": "Demo video"
+    }
   }
 }
