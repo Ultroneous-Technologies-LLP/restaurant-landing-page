@@ -1,4 +1,9 @@
-import { EatingWellProps, HeroSectionProps, QualityComesProps } from "@/components/home";
+import {
+  EatingWellProps,
+  HeroSectionProps,
+  MostPopularDishesProps,
+  QualityComesProps,
+} from "@/components/home";
 import { FooterProps } from "@/components/layout";
 
 export interface LayoutProps {
@@ -9,4 +14,5 @@ export interface homePageProps {
   heroSection: HeroSectionProps;
   eatingWellSection: EatingWellProps;
   qualityComesSection: QualityComesProps;
+  mostPopularDishesSection: MostPopularDishesProps;
 }
