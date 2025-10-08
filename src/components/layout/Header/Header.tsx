@@ -1,6 +1,7 @@
 "use client";
 
 import clsx from "clsx";
+import Link from "next/link";
 import { FC, useEffect, useState } from "react";
 
 import { Container } from "@/components/common";
@@ -32,12 +33,13 @@ export const Header: FC = () => {
         <p className="font-JomolHari text-2xl/6 md:text-3xl/6.5 xl:text-[40px]/10 text-black">
           <span>{HeaderTextEnum.FODO}</span>
         </p>
-        <button
+        <Link
           className="font-inter rounded-full bg-black p-1.5 md:py-3 md:px-4 xl:px-11 xl:py-4.5 text-xs/3 xl:text-base/4 font-bold text-white uppercase transition-colors duration-500 ease-in-out 
         hover:bg-[#EE4230]"
+          href="#menu"
         >
           <span>{HeaderTextEnum.MENU}</span>
-        </button>
+        </Link>
       </Container>
     </nav>
   );
