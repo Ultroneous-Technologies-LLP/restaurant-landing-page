@@ -7,7 +7,7 @@
   --font-eugusto: var(--font-eugusto);
 
   --animate-spin-slow: spin-slow 3s linear infinite;
-  --animate-spin-15s: spin-slow 15s linear infinite;
+  --animate-spin-15: spin-slow 15s linear infinite;
 }
 
 body {
