@@ -1,4 +1,5 @@
 import {
+  AnyPlanProps,
   EatingWellProps,
   ExtraordinaryExperienceProps,
   HeroSectionProps,
@@ -19,4 +20,5 @@ export interface homePageProps {
   mostPopularDishesSection: MostPopularDishesProps;
   extraordinaryExperienceSection: ExtraordinaryExperienceProps;
   ourSpecialMenuSection: OurSpecialMenuProps;
+  anyPlanSection: AnyPlanProps;
 }
