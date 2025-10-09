@@ -24,6 +24,23 @@ textarea,svg {
   cursor: url("/cursor.svg"), pointer;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* Remove clear & spin buttons in Chrome */
+input[type="date"]::-webkit-clear-button,
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type="date"] {
+  -moz-appearance: textfield;
+}
+
 .hidden-scroll-bar::-webkit-scrollbar {
   display: none; /* Hides the scrollbar */
 }

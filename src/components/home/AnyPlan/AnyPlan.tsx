@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { FC } from "react";
 import Image from "next/image";
 
-import { Button, Container } from "@/components/common";
+import { Container, ModalButton } from "@/components/common";
 
 import { AnyPlanProps } from "./types";
 
@@ -51,9 +51,9 @@ export const AnyPlan: FC<AnyPlanProps> = ({
           );
         })}
       </div>
-      <Button variant="outline" className="md:px-6 xl:px-11">
+      <ModalButton variant="outline" className="md:px-6 xl:px-11">
         {button.label}
-      </Button>
+      </ModalButton>
     </div>
   </Container>
 );

@@ -1,9 +1,7 @@
-"use client";
-
 import clsx from "clsx";
 import { FC } from "react";
 
-import { ButtonProps } from "./types";
+import { ButtonProps } from "@/components/types";
 
 export const Button: FC<ButtonProps> = ({
   variant = "primary",

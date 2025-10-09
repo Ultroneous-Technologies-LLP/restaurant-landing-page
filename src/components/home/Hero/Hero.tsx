@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 
-import { Button, Container } from "@/components/common";
+import { Container, ModalButton } from "@/components/common";
 
 import { HeroSectionProps } from "./types";
 
@@ -66,12 +66,12 @@ export const Hero: FC<HeroSectionProps> = ({
                 </div>
               </div>
               <div className="pl-5 xl:pl-12">
-                <Button
+                <ModalButton
                   variant="primary"
                   className="px-6 xl:px-11 mt-4 xl:mt-10.5"
                 >
                   {button.label}
-                </Button>
+                </ModalButton>
               </div>
             </div>
             <div className="absolute -top-4 -left-4 xl:-left-25 z-0">

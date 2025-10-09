@@ -6,4 +6,8 @@ export * from './Cart'
 export * from './PlayButton'
 export * from './DoubleQuotes'
 export * from './LeftArrow'
+export * from './Cross'
+export * from './Dropdown'
+export * from './Clock'
+export * from './Calendar'
 
