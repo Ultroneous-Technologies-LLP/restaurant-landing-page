@@ -1,8 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
-import { Container } from "@/components/common";
+import { Button, Container } from "@/components/common";
 
 import { EatingWellProps } from "./types";
 
@@ -60,12 +59,9 @@ export const EatingWell: FC<EatingWellProps> = ({
         ))}
       </div>
       <div>
-        <Link
-          href={cta.href}
-          className="py-4.5 px-11 border border-black inline-block mt-4 xl:mt-10 rounded-4xl text-base/4 font-bold font-inter hover:bg-black hover:text-white transition-colors duration-500 ease-in-out w-full md:w-fit text-center"
-        >
-          <span>{cta.label}</span>
-        </Link>
+        <Button variant="outline" className="mt-4 xl:mt-10 px-11">
+          {cta.label}
+        </Button>
       </div>
     </div>
   </Container>

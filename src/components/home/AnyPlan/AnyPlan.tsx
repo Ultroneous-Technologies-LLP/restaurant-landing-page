@@ -1,9 +1,8 @@
 import clsx from "clsx";
 import { FC } from "react";
-import Link from "next/link";
 import Image from "next/image";
 
-import { Container } from "@/components/common";
+import { Button, Container } from "@/components/common";
 
 import { AnyPlanProps } from "./types";
 
@@ -52,13 +51,9 @@ export const AnyPlan: FC<AnyPlanProps> = ({
           );
         })}
       </div>
-      <Link
-        className="font-inter font-bold py-4.5 md:px-6 xl:px-11 text-base/4 border border-black w-full md:w-fit rounded-full xl:rounded-4xl inline-block 
-        hover:border-transparent hover:bg-black hover:text-white transition-colors duration-500 ease-in-out"
-        href={button.href}
-      >
+      <Button variant="outline" className="md:px-6 xl:px-11">
         {button.label}
-      </Link>
+      </Button>
     </div>
   </Container>
 );

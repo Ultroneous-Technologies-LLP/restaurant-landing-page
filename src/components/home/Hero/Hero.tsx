@@ -1,8 +1,7 @@
 import { FC } from "react";
-import Link from "next/link";
 import Image from "next/image";
 
-import { Container } from "@/components/common";
+import { Button, Container } from "@/components/common";
 
 import { HeroSectionProps } from "./types";
 
@@ -67,12 +66,12 @@ export const Hero: FC<HeroSectionProps> = ({
                 </div>
               </div>
               <div className="pl-5 xl:pl-12">
-                <Link
-                  href={button.link}
-                  className="bg-black py-4.5 px-6 xl:px-11 rounded-4xl text-base/4 font-bold font-inter text-white mt-4 xl:mt-10.5 inline-block"
+                <Button
+                  variant="primary"
+                  className="px-6 xl:px-11 mt-4 xl:mt-10.5"
                 >
-                  <span>{button.label}</span>
-                </Link>
+                  {button.label}
+                </Button>
               </div>
             </div>
             <div className="absolute -top-4 -left-4 xl:-left-25 z-0">
