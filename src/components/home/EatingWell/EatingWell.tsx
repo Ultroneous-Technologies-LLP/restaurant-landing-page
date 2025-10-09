@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 
-import { Button, Container } from "@/components/common";
+import { Container, ModalButton } from "@/components/common";
 
 import { EatingWellProps } from "./types";
 
@@ -59,9 +59,9 @@ export const EatingWell: FC<EatingWellProps> = ({
         ))}
       </div>
       <div>
-        <Button variant="outline" className="mt-4 xl:mt-10 px-11">
+        <ModalButton variant="outline" className="mt-4 xl:mt-10 px-11">
           {cta.label}
-        </Button>
+        </ModalButton>
       </div>
     </div>
   </Container>

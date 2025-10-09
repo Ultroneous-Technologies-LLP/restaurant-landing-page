@@ -6,5 +6,5 @@ export interface ImageTypes {
 
 export interface CtaButtonType {
   label: string;
-  href: string;
+  href?: string;
 }

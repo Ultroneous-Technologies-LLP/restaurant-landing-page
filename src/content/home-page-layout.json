@@ -432,5 +432,24 @@
         "text": "Rosoi is one of the most popular and tasty Restaurant with unique & special test food menu made by our passionate chefs with love and quality."
       }
     ]
+  },
+  "popUpSection": {
+    "title": "Reserve Your Table",
+    "description": "Book your date and time in just a few clicks. We look forward to welcoming you.",
+    "customInputs": {
+      "party": {
+        "label": "Party Size",
+        "placeholder": "Guests (or Party Size)"
+      },
+      "date": { "label": "Date", "placeholder": "DD/MM/YYYY" },
+      "time": { "label": "Time", "placeholder": "Select time" }
+    },
+    "ctaButton": {
+      "label": "Confirm Reservation"
+    },
+    "dinnerServices": {
+      "monToSaturday": "Dinner Service: Monday - Saturday: 10:00am- 11.30pm",
+      "sunday": "Sunday: 7:30am- 11.30pm"
+    }
   }
 }
