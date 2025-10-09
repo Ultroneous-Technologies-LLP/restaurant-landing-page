@@ -22,8 +22,10 @@ export const Button: FC<ButtonProps> = ({
   const combinedClass = clsx(baseClass, variants[variant], className);
 
   return (
-    <button {...rest} className={combinedClass}>
-      {children}
-    </button>
+    <>
+      <button {...rest} className={combinedClass}>
+        {children}
+      </button>
+    </>
   );
 };
