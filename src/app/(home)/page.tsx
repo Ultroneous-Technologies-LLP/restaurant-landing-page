@@ -25,8 +25,8 @@ const Home = () => {
   }: homePageProps = data;
   return (
     <>
-      <Hero {...heroSection} />;
-      <EatingWell {...eatingWellSection} />;
+      <Hero {...heroSection} />
+      <EatingWell {...eatingWellSection} />
       <QualityComes {...qualityComesSection} />
       <MostPopularDishes {...mostPopularDishesSection} />
       <ExtraordinaryExperience {...extraordinaryExperienceSection} />

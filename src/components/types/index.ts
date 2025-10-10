@@ -7,5 +7,4 @@ export interface ButtonProps
   children: ReactNode;
   className?: string;
   variant?: ButtonVariants;
-  isPopup?:boolean
 }

@@ -59,7 +59,7 @@ export const TestimonialsSlider: FC<TestimonialsSliderProps> = ({ data }) => {
           </button>
         </div>
         <div className="size-18 bg-[#3D8FFF] rounded-full justify-center items-center md:absolute -top-9 right-13.5 xl:-top-5 xl:-right-2 hidden md:flex">
-          <DoubleQuotes className="text-white" />
+          <DoubleQuotes className="text-white !cursor-auto" />
         </div>
       </div>
     </>
