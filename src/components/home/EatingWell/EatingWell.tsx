@@ -1,17 +1,11 @@
-import { FC } from "react";
-import Image from "next/image";
+import { FC } from 'react';
+import Image from 'next/image';
 
-import { Button, Container } from "@/components/common";
+import { Button, Container } from '@/components/common';
 
-import { EatingWellProps } from "./types";
+import { EatingWellProps } from './types';
 
-export const EatingWell: FC<EatingWellProps> = ({
-  cards,
-  description,
-  cta,
-  heading,
-  images,
-}) => (
+export const EatingWell: FC<EatingWellProps> = ({ cards, description, cta, heading, images }) => (
   <Container className="grid md:grid-cols-2 px-4 md:px-6 xl:px-18 pt-20 md:pt-30 xl:pt-37.5 gap-8 md:gap-12 xl:gap-28">
     <div className="max-w-150 w-full order-2 md:order-1">
       <div>
@@ -44,12 +38,7 @@ export const EatingWell: FC<EatingWellProps> = ({
         {cards.map((card) => (
           <div key={card.id} className="p-4 xl:p-5 bg-[#FFF4E4] rounded-xl">
             <h3 className="flex gap-2.5 items-center font-proximaNova font-bold text-base/6 xl:text-xl/5 pb-2.5 xl:pb-4">
-              <Image
-                src={card.icon.src}
-                alt={card.icon.alt}
-                width={30}
-                height={26}
-              />
+              <Image src={card.icon.src} alt={card.icon.alt} width={30} height={26} />
               <span>{card.title}</span>
             </h3>
             <p className="font-proximaNova text-lg/5 xl:text-xl/7.5">

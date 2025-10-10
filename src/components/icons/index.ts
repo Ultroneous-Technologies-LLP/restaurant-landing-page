@@ -1,9 +1,8 @@
-export * from './Dribble'
-export * from './Instagram'
-export * from './BeHance'
-export * from './LinkedIn'
-export * from './Cart'
-export * from './PlayButton'
-export * from './DoubleQuotes'
-export * from './LeftArrow'
-
+export * from './BeHance';
+export * from './Cart';
+export * from './DoubleQuotes';
+export * from './Dribble';
+export * from './Instagram';
+export * from './LeftArrow';
+export * from './LinkedIn';
+export * from './PlayButton';

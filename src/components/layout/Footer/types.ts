@@ -1,6 +1,6 @@
-import { ImageTypes } from "@/types";
+import { ImageTypes } from '@/types';
 
-export type SocialIconNameType = "Dribble" | "Instagram" | "BeHance" | "LinkedIn";
+export type SocialIconNameType = 'Dribble' | 'Instagram' | 'BeHance' | 'LinkedIn';
 
 interface SocialLink {
   id: number;

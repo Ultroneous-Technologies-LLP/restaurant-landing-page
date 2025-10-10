@@ -1,4 +1,4 @@
-export enum HeaderTextEnum  {
-    FODO = 'FODO',
-    MENU = 'MENU'
+export enum HeaderTextEnum {
+  FODO = 'FODO',
+  MENU = 'MENU',
 }

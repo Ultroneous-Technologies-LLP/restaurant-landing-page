@@ -1,9 +1,9 @@
-import { FC } from "react";
+import { FC } from 'react';
 
-import { Container } from "@/components/common";
+import { Container } from '@/components/common';
 
-import { Video } from "./Video";
-import { ExtraordinaryExperienceProps } from "./types";
+import { Video } from './Video';
+import { ExtraordinaryExperienceProps } from './types';
 
 export const ExtraordinaryExperience: FC<ExtraordinaryExperienceProps> = ({
   items,

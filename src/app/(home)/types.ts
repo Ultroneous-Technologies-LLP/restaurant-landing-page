@@ -7,8 +7,8 @@ import {
   OurSpecialMenuProps,
   QualityComesProps,
   TestimonialProps,
-} from "@/components/home";
-import { FooterProps } from "@/components/layout";
+} from '@/components/home';
+import { FooterProps } from '@/components/layout';
 
 export interface LayoutProps {
   footer: FooterProps;

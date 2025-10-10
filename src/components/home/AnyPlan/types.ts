@@ -1,4 +1,4 @@
-import { CtaButtonType, ImageTypes } from "@/types";
+import { CtaButtonType, ImageTypes } from '@/types';
 
 interface OpeningHours {
   id: number;

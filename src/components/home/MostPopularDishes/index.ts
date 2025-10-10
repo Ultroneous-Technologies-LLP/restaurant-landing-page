@@ -1,2 +1,2 @@
-export * from './MostPopularDishes'
-export type { MostPopularDishesProps } from "./types";
+export * from './MostPopularDishes';
+export type { MostPopularDishesProps } from './types';

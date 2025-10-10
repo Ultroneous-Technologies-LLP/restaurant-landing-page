@@ -1,30 +1,30 @@
-"use client";
+'use client';
 
-import clsx from "clsx";
-import Link from "next/link";
-import { FC, useEffect, useState } from "react";
+import clsx from 'clsx';
+import Link from 'next/link';
+import { FC, useEffect, useState } from 'react';
 
-import { Container } from "@/components/common";
+import { Container } from '@/components/common';
 
-import { HeaderTextEnum } from "./enum";
+import { HeaderTextEnum } from './enum';
 
 export const Header: FC = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <nav
       className={clsx(
-        "fixed top-0 left-1/2 z-50 mx-auto w-full -translate-x-1/2 transition-colors duration-700 ease-in-out",
+        'fixed top-0 left-1/2 z-50 mx-auto w-full -translate-x-1/2 transition-colors duration-700 ease-in-out',
         {
-          "bg-transparent": !scrolled,
-          "bg-white/50 shadow-md backdrop-blur-[22px]": scrolled,
-        }
+          'bg-transparent': !scrolled,
+          'bg-white/50 shadow-md backdrop-blur-[22px]': scrolled,
+        },
       )}
       role="navigation"
       aria-label="Main Navigation"

@@ -1,10 +1,6 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react';
 
-export const Instagram = ({
-  width = 20,
-  height = 20,
-  ...svgProps
-}: SVGProps<SVGSVGElement>) => (
+export const Instagram = ({ width = 20, height = 20, ...svgProps }: SVGProps<SVGSVGElement>) => (
   <svg
     width={width}
     height={height}

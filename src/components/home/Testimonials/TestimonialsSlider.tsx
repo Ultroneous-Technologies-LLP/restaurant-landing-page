@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { FC, useRef } from "react";
-import { Swiper as SwiperType } from "swiper";
+import { FC, useRef } from 'react';
+import { Swiper as SwiperType } from 'swiper';
 
-import { DoubleQuotes, LeftArrow } from "@/components/icons";
+import { DoubleQuotes, LeftArrow } from '@/components/icons';
 
-import { Card } from "./Card";
-import { TestimonialsSliderProps } from "./types";
+import { Card } from './Card';
+import { TestimonialsSliderProps } from './types';
 
 export const TestimonialsSlider: FC<TestimonialsSliderProps> = ({ data }) => {
   const topSwiperRef = useRef<SwiperType>(null);

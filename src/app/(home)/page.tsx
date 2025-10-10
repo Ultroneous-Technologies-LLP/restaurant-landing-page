@@ -1,4 +1,4 @@
-import data from "@/content/home-page-layout.json";
+import data from '@/content/home-page-layout.json';
 import {
   AnyPlan,
   EatingWell,
@@ -8,9 +8,9 @@ import {
   OurSpecialMenu,
   QualityComes,
   Testimonials,
-} from "@/components/home";
+} from '@/components/home';
 
-import { homePageProps } from "./types";
+import { homePageProps } from './types';
 
 const Home = () => {
   const {

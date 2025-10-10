@@ -1,9 +1,9 @@
-import { FC } from "react";
-import Image from "next/image";
+import { FC } from 'react';
+import Image from 'next/image';
 
-import { Button, Container } from "@/components/common";
+import { Button, Container } from '@/components/common';
 
-import { HeroSectionProps } from "./types";
+import { HeroSectionProps } from './types';
 
 export const Hero: FC<HeroSectionProps> = ({
   backgroundImage,
@@ -19,14 +19,8 @@ export const Hero: FC<HeroSectionProps> = ({
   <Container className="relative">
     <div className="pt-1 px-4">
       <picture>
-        <source
-          srcSet={backgroundImage.mobileImage.src}
-          media="(max-width: 767px)"
-        />
-        <source
-          srcSet={backgroundImage.tabImage.src}
-          media="(max-width: 1024px)"
-        />
+        <source srcSet={backgroundImage.mobileImage.src} media="(max-width: 767px)" />
+        <source srcSet={backgroundImage.tabImage.src} media="(max-width: 1024px)" />
         <img
           src={backgroundImage.desktopImage.src}
           alt={backgroundImage.alt}
@@ -66,10 +60,7 @@ export const Hero: FC<HeroSectionProps> = ({
                 </div>
               </div>
               <div className="pl-5 xl:pl-12">
-                <Button
-                  variant="primary"
-                  className="px-6 xl:px-11 mt-4 xl:mt-10.5"
-                >
+                <Button variant="primary" className="px-6 xl:px-11 mt-4 xl:mt-10.5">
                   {button.label}
                 </Button>
               </div>

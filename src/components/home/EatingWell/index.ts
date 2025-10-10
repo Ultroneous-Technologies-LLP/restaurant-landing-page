@@ -1,2 +1,2 @@
-export * from "./EatingWell";
-export type { EatingWellProps } from "./types";
+export * from './EatingWell';
+export type { EatingWellProps } from './types';

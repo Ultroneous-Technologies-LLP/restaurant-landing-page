@@ -1,4 +1,4 @@
-import { ImageTypes } from "@/types";
+import { ImageTypes } from '@/types';
 
 interface Src {
   src: string;

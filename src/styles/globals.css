@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme inline {
   --font-JomolHari: var(--font-JomolHari);
@@ -20,8 +20,9 @@ body {
 button,
 a,
 input,
-textarea,svg {
-  cursor: url("/cursor.svg"), pointer;
+textarea,
+svg {
+  cursor: url('/cursor.svg'), pointer;
 }
 
 .hidden-scroll-bar::-webkit-scrollbar {

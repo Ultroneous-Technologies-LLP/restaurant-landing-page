@@ -1,2 +1,2 @@
-export * from "./QualityComes";
-export type { QualityComesProps } from "./types";
+export * from './QualityComes';
+export type { QualityComesProps } from './types';

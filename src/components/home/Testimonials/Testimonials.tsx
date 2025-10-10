@@ -1,9 +1,9 @@
-import { FC } from "react";
+import { FC } from 'react';
 
-import { Container } from "@/components/common";
+import { Container } from '@/components/common';
 
-import { TestimonialProps } from "./types";
-import { TestimonialsSlider } from "./TestimonialsSlider";
+import { TestimonialProps } from './types';
+import { TestimonialsSlider } from './TestimonialsSlider';
 
 export const Testimonials: FC<TestimonialProps> = ({
   description,

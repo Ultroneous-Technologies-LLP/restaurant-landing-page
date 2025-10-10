@@ -1,21 +1,21 @@
-"use client";
+'use client';
 
-import "swiper/css";
-import "swiper/css/effect-fade";
+import 'swiper/css';
+import 'swiper/css/effect-fade';
 
-import clsx from "clsx";
-import { FC } from "react";
-import Image from "next/image";
-import { EffectFade } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import clsx from 'clsx';
+import { FC } from 'react';
+import Image from 'next/image';
+import { EffectFade } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { CardProps } from "./types";
+import { CardProps } from './types';
 
 export const Card: FC<CardProps> = ({ data, swiperRef, className }) => (
   <div
     className={clsx(
-      "overflow-hidden w-full max-w-129 md:max-w-107.5 xl:max-w-129 rounded-4xl z-10",
-      className
+      'overflow-hidden w-full max-w-129 md:max-w-107.5 xl:max-w-129 rounded-4xl z-10',
+      className,
     )}
   >
     <Swiper
@@ -33,13 +33,7 @@ export const Card: FC<CardProps> = ({ data, swiperRef, className }) => (
           <SwiperSlide key={id}>
             <div className="bg-white shadow-[0_6px_10px_0_#0000000D] max-w-129 md:max-w-107.5 xl:max-w-129 w-full mx-auto rounded-4xl p-6 xl:p-7.5 h-full">
               <div className="flex gap-4 xl:gap-5 items-center pb-6 xl:pb-8">
-                <Image
-                  src={img}
-                  alt={name}
-                  width={64}
-                  height={64}
-                  className="size-14 xl:size-16"
-                />
+                <Image src={img} alt={name} width={64} height={64} className="size-14 xl:size-16" />
                 <div>
                   <h3 className="font-proximaNova text-base/4 xl:text-xl/7.5 font-bold">
                     <span>{name}</span>

@@ -1,9 +1,9 @@
-import { FC } from "react";
-import Image from "next/image";
+import { FC } from 'react';
+import Image from 'next/image';
 
-import { Container } from "@/components/common";
+import { Container } from '@/components/common';
 
-import { QualityComesProps } from "./types";
+import { QualityComesProps } from './types';
 
 export const QualityComes: FC<QualityComesProps> = ({
   backgroundImage,
@@ -35,10 +35,7 @@ export const QualityComes: FC<QualityComesProps> = ({
             height={311}
             className="z-10 w-22 h-31 md:w-41 md:h-58.5 xl:w-54 xl:h-77.5"
           />
-          <svg
-            viewBox="0 0 300 300"
-            className="absolute w-[105%] h-[105%] animate-spin-15"
-          >
+          <svg viewBox="0 0 300 300" className="absolute w-[105%] h-[105%] animate-spin-15">
             <defs>
               <path
                 id="circlePath"

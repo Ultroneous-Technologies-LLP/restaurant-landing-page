@@ -1,2 +1,2 @@
-export * from "./ExtraordinaryExperience";
-export type { VideoProps, ExtraordinaryExperienceProps } from "./types";
+export * from './ExtraordinaryExperience';
+export type { VideoProps, ExtraordinaryExperienceProps } from './types';

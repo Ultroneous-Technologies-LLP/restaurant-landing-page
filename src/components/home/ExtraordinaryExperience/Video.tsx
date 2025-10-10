@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { FC, useState } from "react";
+import Image from 'next/image';
+import { FC, useState } from 'react';
 
-import { PlayButton } from "@/components/icons";
+import { PlayButton } from '@/components/icons';
 
-import { VideoProps } from "./types";
+import { VideoProps } from './types';
 
 export const Video: FC<VideoProps> = ({ alt, poster, src }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -18,13 +18,7 @@ export const Video: FC<VideoProps> = ({ alt, poster, src }) => {
     >
       {!isPlaying ? (
         <div className="relative w-full h-full rounded-2xl">
-          <Image
-            src={poster}
-            alt={alt}
-            fill
-            className="object-cover"
-            title={alt}
-          />
+          <Image src={poster} alt={alt} fill className="object-cover" title={alt} />
           <button
             onClick={() => setIsPlaying(true)}
             className="absolute inset-0 m-auto transition items-center justify-center size-12 xl:size-24 bg-white rounded-full shadow-[0_0_0_10px_#FFFFFF66]
@@ -33,7 +27,7 @@ export const Video: FC<VideoProps> = ({ alt, poster, src }) => {
           >
             <PlayButton
               aria-hidden="true"
-              {...{ focusable: "false" }}
+              {...{ focusable: 'false' }}
               className="size-2 xl:w-4.5 xl:h-5"
             />
           </button>

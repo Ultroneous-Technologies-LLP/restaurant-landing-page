@@ -1,10 +1,6 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react';
 
-export const BeHance = ({
-  width = 18,
-  height = 12,
-  ...svgProps
-}: SVGProps<SVGSVGElement>) => (
+export const BeHance = ({ width = 18, height = 12, ...svgProps }: SVGProps<SVGSVGElement>) => (
   <svg
     width={width}
     height={height}

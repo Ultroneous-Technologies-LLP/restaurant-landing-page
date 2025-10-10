@@ -1,2 +1,2 @@
-export * from './AnyPlan'
-export type { AnyPlanProps} from './types'
+export * from './AnyPlan';
+export type { AnyPlanProps } from './types';

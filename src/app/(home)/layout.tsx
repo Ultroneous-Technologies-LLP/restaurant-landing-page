@@ -1,33 +1,33 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
-import data from "@/content/layout.json";
-import { eugusto, inter, jomolHari, proximaNova } from "@/constants";
-import { Footer, Header, SocialIconNameType } from "@/components/layout";
+import data from '@/content/layout.json';
+import { eugusto, inter, jomolHari, proximaNova } from '@/constants';
+import { Footer, Header, SocialIconNameType } from '@/components/layout';
 
-import "../../styles/globals.css";
-import { LayoutProps } from "./types";
+import '../../styles/globals.css';
+import { LayoutProps } from './types';
 
 export const metadata: Metadata = {
-  title: "Restaurant Website Design | Modern Food & Dining UI Concept",
+  title: 'Restaurant Website Design | Modern Food & Dining UI Concept',
   description:
-    "Elegant restaurant website landing page UI. Modern dining design for food businesses, online reservations, and fine dining digital experiences.",
+    'Elegant restaurant website landing page UI. Modern dining design for food businesses, online reservations, and fine dining digital experiences.',
   keywords: [
-    "restaurant website design",
-    "food and dining UI",
-    "restaurant landing page",
-    "modern food website template",
-    "fine dining web design",
-    "online food ordering UI",
-    "restaurant reservation website",
-    "culinary website concept",
+    'restaurant website design',
+    'food and dining UI',
+    'restaurant landing page',
+    'modern food website template',
+    'fine dining web design',
+    'online food ordering UI',
+    'restaurant reservation website',
+    'culinary website concept',
   ],
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon.png", sizes: "16x16", type: "image/png" },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.png', sizes: '16x16', type: 'image/png' },
     ],
-    apple: [{ url: "/favicon.png", sizes: "180x180" }],
+    apple: [{ url: '/favicon.png', sizes: '180x180' }],
   },
 };
 

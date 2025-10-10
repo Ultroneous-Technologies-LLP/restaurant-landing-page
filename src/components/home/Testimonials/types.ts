@@ -1,4 +1,4 @@
-import type { Swiper as SwiperType } from "swiper";
+import type { Swiper as SwiperType } from 'swiper';
 
 export interface CustomersSays {
   id: number;

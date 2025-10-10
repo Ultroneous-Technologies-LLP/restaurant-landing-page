@@ -1,11 +1,11 @@
-import { FC } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { FC } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
-import { Container } from "@/components/common";
+import { Container } from '@/components/common';
 
-import { ICONS } from "./constant";
-import { FooterProps } from "./types";
+import { ICONS } from './constant';
+import { FooterProps } from './types';
 
 export const Footer: FC<FooterProps> = ({ icon, navLinks, socialLinks }) => (
   <Container>

@@ -1,15 +1,12 @@
-import Image from "next/image";
-import { FC } from "react";
+import Image from 'next/image';
+import { FC } from 'react';
 
-import { Cart } from "@/components/icons";
-import { Container } from "@/components/common";
+import { Cart } from '@/components/icons';
+import { Container } from '@/components/common';
 
-import { MostPopularDishesProps } from "./types";
+import { MostPopularDishesProps } from './types';
 
-export const MostPopularDishes: FC<MostPopularDishesProps> = ({
-  dishes,
-  title,
-}) => (
+export const MostPopularDishes: FC<MostPopularDishesProps> = ({ dishes, title }) => (
   <Container className="px-4 md:px-6 xl:px-18 py-20 md:py-30 xl:py-37.5">
     <h2 className="font-eugusto text-3xl/12 xl:text-5xl/15 pb-8 xl:pb-25 text-center">
       <span>{title}</span>
