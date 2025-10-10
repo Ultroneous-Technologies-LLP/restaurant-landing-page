@@ -55,7 +55,7 @@ export const Tab: FC<TabProps> = ({ tabs }) => {
                     <h3 className="text-base/6 xl:text-2xl/7.5 text-black font-eugusto pb-2.5">
                       {title}
                     </h3>
-                    <p className="text-sm/5 xl:text-lg/7.5 text-[#717171]">
+                    <p className="text-sm/5 xl:text-lg/7.5 text-dark-silver">
                       {description}
                     </p>
                   </div>

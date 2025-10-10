@@ -37,7 +37,7 @@ export const EatingWell: FC<EatingWellProps> = ({
       <h2 className="font-eugusto text-3xl/12 xl:text-5xl/15 max-w-95 w-full pb-2 xl:pb-7.5 text-center md:text-start">
         <span>{heading}</span>
       </h2>
-      <p className="font-proximaNova text-sm/5 xl:text-lg/7.5 w-full pb-8 md:pb-4 xl:pb-6 text-[#717171] text-center md:text-start">
+      <p className="font-proximaNova text-sm/5 xl:text-lg/7.5 w-full pb-8 md:pb-4 xl:pb-6 text-dark-silver text-center md:text-start">
         <span>{description}</span>
       </p>
       <div className="space-y-2 md:space-y-4 xl:space-y-2">

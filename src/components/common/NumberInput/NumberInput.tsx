@@ -44,10 +44,10 @@ export const NumberInput: FC<NumberInputProps> = ({
       </label>
       <div
         ref={dropdownRef}
-        className="p-4 border border-[#CECCCA] rounded-full flex gap-4 items-center relative cursor-pointer"
+        className="p-4 border border-chinese-silver rounded-full flex gap-4 items-center relative cursor-pointer"
       >
         <div
-          className="size-8 bg-[#FFF2F0] rounded-lg flex justify-center items-center"
+          className="size-8 bg-seashell rounded-lg flex justify-center items-center"
           onClick={() => setOpen((prev) => !prev)}
         >
           <Dropdown />
@@ -55,14 +55,14 @@ export const NumberInput: FC<NumberInputProps> = ({
         <input
           id={label}
           type="text"
-          className="font-inter text-base/4 text-[#A9A6A6] placeholder:text-[#A9A6A6] focus:outline-none w-full"
+          className="font-inter text-base/4 text-quick-silver placeholder:text-quick-silver focus:outline-none w-full"
           placeholder={placeholder}
           value={value}
           onChange={(e) => setValue(e.target.value)}
           onClick={() => setOpen(true)}
         />
         {open && (
-          <div className="absolute top-12.5 left-4 mt-2 max-w-50 w-full bg-white shadow-[0_3px_10px_0_#00000014] z-50 rounded-lg overflow-hidden">
+          <div className="absolute top-12.5 left-4 mt-2 max-w-50 w-full bg-white shadow-custom z-50 rounded-lg overflow-hidden">
             <div className="overflow-y-auto max-h-45 p-2">
               {filteredOptions.length > 0 ? (
                 filteredOptions.map((opt) => (
@@ -75,7 +75,7 @@ export const NumberInput: FC<NumberInputProps> = ({
                   </div>
                 ))
               ) : (
-                <div className="p-3 text-[#A9A6A6] text-sm font-inter">
+                <div className="p-3 text-quick-silver text-sm font-inter">
                   {NumberInputTextEnum.NO_OPTION_FOUND}
                 </div>
               )}

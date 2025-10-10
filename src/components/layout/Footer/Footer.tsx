@@ -23,7 +23,7 @@ export const Footer: FC<FooterProps> = ({ icon, navLinks, socialLinks }) => (
             href={links}
             key={id}
             title={title}
-            className="text-2xl/7.5 font-eugusto text-white inline-block text-center hover:text-[#E83C2A] transition-colors duration-500 ease-in-out"
+            className="text-2xl/7.5 font-eugusto text-white inline-block text-center hover:text-primary-red transition-colors duration-500 ease-in-out"
           >
             <span>{title}</span>
           </Link>
@@ -37,9 +37,9 @@ export const Footer: FC<FooterProps> = ({ icon, navLinks, socialLinks }) => (
               key={id}
               href={href}
               aria-label={label}
-              className="size-12 rounded-full border border-white/30 flex justify-center items-center hover:border-[#E83C2A] focus:outline-none focus:ring-2 focus:ring-[#E83C2A] group duration-500 ease-in-out transition-colors"
+              className="size-12 rounded-full border border-white/30 flex justify-center items-center hover:border-primary-red focus:outline-none focus:ring-2 focus:ring-primary-red group duration-500 ease-in-out transition-colors"
             >
-              <Icon className="text-white group-hover:text-[#E83C2A] group-focus:text-[#E83C2A] duration-500 ease-in-out" />
+              <Icon className="text-white group-hover:text-primary-red group-focus:text-primary-red duration-500 ease-in-out" />
             </Link>
           );
         })}

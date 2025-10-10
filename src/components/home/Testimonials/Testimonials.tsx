@@ -22,7 +22,7 @@ export const Testimonials: FC<TestimonialProps> = ({
       <p className="font-eugusto text-xl/7.5 xl:text-2xl/7.5 pb-2 xl:pb-7.5 xl:max-w-46.5 w-full text-center xl:text-start">
         <span>{description}</span>
       </p>
-      <p className="font-proximaNova text-sm/5 xl:text-lg/7.5 text-[#717171] text-center xl:text-start">
+      <p className="font-proximaNova text-sm/5 xl:text-lg/7.5 text-dark-silver text-center xl:text-start">
         <span>{longDescription}</span>
       </p>
     </div>
