@@ -4,6 +4,7 @@ import { FC, useEffect, useRef } from "react";
 
 import { useOutsideClick } from "@/hooks";
 
+import { Title } from "../Title";
 import { Button } from "../Button";
 import { Cross } from "../../icons";
 import { ModalProps } from "./types";
@@ -43,9 +44,7 @@ export const Modal: FC<ModalProps> = ({
       >
         <div className="flex gap-1.5 justify-between items-start ">
           <div>
-            <h2 className="font-eugusto text-3xl/12 pb-2">
-              <span>{title}</span>
-            </h2>
+            <Title title={title} className="pb-2" />
             <p className="font-proximaNova text-sm/5 text-dark-silver">
               <span>{description}</span>
             </p>

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 
-import { Container } from "@/components/common";
+import { Container, Title } from "@/components/common";
 
 import { QualityComesProps } from "./types";
 
@@ -21,9 +21,7 @@ export const QualityComes: FC<QualityComesProps> = ({
         className="h-155 md:h-180 xl:h-226.5"
       />
       <div className="absolute top-25 md:top-20 xl:top-25 left-1/2 -translate-x-1/2 w-full px-4 md:px-0">
-        <h2 className="font-eugusto text-3xl/12 xl:text-5xl/15 pb-2 xl:pb-7.5 text-center">
-          <span>{heading}</span>
-        </h2>
+        <Title title={heading} className="pb-2 xl:pb-7.5" />
         <p className="font-proximaNova text-sm/5 xl:text-lg/7.5 pb-16 md:pb-12 xl:pb-10 text-center md:max-w-133 xl:max-w-235.5 w-full mx-auto">
           <span>{description}</span>
         </p>

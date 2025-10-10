@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 
-import { Container, ModalButton } from "@/components/common";
+import { Container, ModalButton, Title } from "@/components/common";
 
 import { EatingWellProps } from "./types";
 
@@ -13,7 +13,7 @@ export const EatingWell: FC<EatingWellProps> = ({
   images,
 }) => (
   <Container className="grid md:grid-cols-2 px-4 md:px-6 xl:px-18 pt-20 md:pt-30 xl:pt-37.5 gap-8 md:gap-12 xl:gap-28">
-    <div className="max-w-150 w-full order-2 md:order-1">
+    <div className="md:max-w-150 w-full order-2 md:order-1">
       <div>
         <Image
           src={images.food1.src}
@@ -29,14 +29,15 @@ export const EatingWell: FC<EatingWellProps> = ({
           alt={images.food2.alt}
           width={396}
           height={392}
-          className="md:block md:w-58 md:h-75 lg:w-99 lg:h-83 object-cover rounded-3xl"
+          className="mx-auto md:ml-0 md:mr-auto md:block md:w-58 md:h-75 lg:w-99 lg:h-83 object-cover rounded-3xl"
         />
       </div>
     </div>
     <div className="order-1 md:order-2">
-      <h2 className="font-eugusto text-3xl/12 xl:text-5xl/15 max-w-95 w-full pb-2 xl:pb-7.5 text-center md:text-start">
-        <span>{heading}</span>
-      </h2>
+      <Title
+        title={heading}
+        className="md:text-start max-w-95 mx-auto md:ml-0 md:mr-auto w-full pb-2 xl:pb-7.5"
+      />
       <p className="font-proximaNova text-sm/5 xl:text-lg/7.5 w-full pb-8 md:pb-4 xl:pb-6 text-dark-silver text-center md:text-start">
         <span>{description}</span>
       </p>

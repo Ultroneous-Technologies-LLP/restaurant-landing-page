@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FC } from "react";
 
 import { Cart } from "@/components/icons";
-import { Container } from "@/components/common";
+import { Container, Title } from "@/components/common";
 
 import { MostPopularDishesProps } from "./types";
 
@@ -11,9 +11,7 @@ export const MostPopularDishes: FC<MostPopularDishesProps> = ({
   title,
 }) => (
   <Container className="px-4 md:px-6 xl:px-18 py-20 md:py-30 xl:py-37.5">
-    <h2 className="font-eugusto text-3xl/12 xl:text-5xl/15 pb-8 xl:pb-25 text-center">
-      <span>{title}</span>
-    </h2>
+    <Title title={title} className="pb-8 xl:pb-25" />
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
       {dishes.map(({ alt, description, id, image, price, title }) => (
         <div
