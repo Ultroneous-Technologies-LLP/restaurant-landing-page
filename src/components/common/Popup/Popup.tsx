@@ -34,7 +34,7 @@ export const Popup: FC<PopupProps> = ({
             <h2 className="font-eugusto text-3xl/12 pb-2">
               <span>{title}</span>
             </h2>
-            <p className="font-proximaNova text-sm/5 text-[#717171]">
+            <p className="font-proximaNova text-sm/5 text-dark-silver">
               <span>{description}</span>
             </p>
           </div>
@@ -65,8 +65,8 @@ export const Popup: FC<PopupProps> = ({
             {ctaButton.label}
           </Button>
         </div>
-        <p className="mt-12 text-sm/3.5 font-inter text-[#717171]">
-          <span className="inline-block pr-2 border-r border-[#717171]">
+        <p className="mt-12 text-sm/3.5 font-inter text-dark-silver">
+          <span className="inline-block pr-2 border-r border-dark-silver">
             {dinnerServices.monToSaturday}
           </span>
           <span className="inline-block pl-2">{dinnerServices.sunday}</span>
