@@ -44,7 +44,7 @@ export const Card: FC<CardProps> = ({ data, swiperRef, className }) => (
                   <h3 className="font-proximaNova text-base/4 xl:text-xl/7.5 font-bold">
                     <span>{name}</span>
                   </h3>
-                  <p className="font-proximaNova text-sm/5 xl:text-xl/7.5 text-[#717171]">
+                  <p className="font-proximaNova text-sm/5 xl:text-xl/7.5 text-dark-silver">
                     <span>{role}</span>
                   </p>
                 </div>
