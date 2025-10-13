@@ -3,10 +3,10 @@
 import { FC, useMemo, useRef, useState } from "react";
 
 import { useOutsideClick } from "@/hooks";
-import { Dropdown } from "@/components/icons";
 
 import { NumberInputProps } from "./types";
 import { NumberInputTextEnum } from "./enum";
+import { Dropdown } from "../../icons/Dropdown";
 
 export const NumberInput: FC<NumberInputProps> = ({
   label,

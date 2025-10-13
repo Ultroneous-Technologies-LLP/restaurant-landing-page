@@ -3,10 +3,10 @@
 import { FC, useMemo, useRef, useState } from "react";
 
 import { useOutsideClick } from "@/hooks";
-import { Clock } from "@/components/icons";
 
 import { TimeInputProps } from "./types";
 import { TimeFormate } from "./constant";
+import { Clock } from "../../icons/Clock";
 import { CustomInputTextEnum } from "./enum";
 
 export const TimeInput: FC<TimeInputProps> = ({ label, placeholder }) => {
@@ -38,6 +38,19 @@ export const TimeInput: FC<TimeInputProps> = ({ label, placeholder }) => {
     setValue(`${hour} ${period}`);
     setOpen(false);
   };
+
+  const handleTimeClick = (hour?: string, period?: CustomInputTextEnum) => {
+    if (hour && selectedPeriod) {
+      handleTimeSelect(hour, selectedPeriod);
+    } else if (period && selectedHour) {
+      handleTimeSelect(selectedHour, period);
+    } else if (hour) {
+      setSelectedHour(hour);
+    } else if (period) {
+      setSelectedPeriod(period);
+    }
+  };
+
   return (
     <div className="mb-4">
       <label
@@ -50,11 +63,8 @@ export const TimeInput: FC<TimeInputProps> = ({ label, placeholder }) => {
         ref={dropdownRef}
         className="p-4 border border-[#CECCCA] rounded-full flex gap-4 items-center relative cursor-pointer"
       >
-        <div
-          className="size-8 bg-[#FFF2F0] rounded-lg flex justify-center items-center"
-          onClick={() => setOpen((prev) => !prev)}
-        >
-          <Clock />
+        <div className="size-8 bg-[#FFF2F0] rounded-lg flex justify-center items-center">
+          <Clock onClick={() => setOpen((prev) => !prev)} />
         </div>
         <input
           id={label}
@@ -76,14 +86,7 @@ export const TimeInput: FC<TimeInputProps> = ({ label, placeholder }) => {
                         ? "bg-[#FDF0EE] text-primary-red font-semibold"
                         : "hover:bg-[#FFF2F0]"
                     }`}
-                    onClick={() =>
-                      selectedPeriod
-                        ? handleTimeSelect(
-                            hour,
-                            selectedPeriod as CustomInputTextEnum
-                          )
-                        : setSelectedHour(hour)
-                    }
+                    onClick={() => handleTimeClick(hour)}
                   >
                     {hour}
                   </div>
@@ -98,11 +101,7 @@ export const TimeInput: FC<TimeInputProps> = ({ label, placeholder }) => {
                         ? "bg-[#FDF0EE] text-primary-red font-semibold"
                         : "hover:bg-[#FFF2F0]"
                     }`}
-                    onClick={() =>
-                      selectedHour
-                        ? handleTimeSelect(selectedHour, period)
-                        : setSelectedPeriod(period)
-                    }
+                    onClick={() => handleTimeClick(undefined, period)}
                   >
                     {period}
                   </div>
