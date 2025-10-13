@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useEffect, useRef } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 
 import { useOutsideClick } from "@/hooks";
 
@@ -22,6 +22,7 @@ export const Modal: FC<ModalProps> = ({
   dinnerServices,
   title,
 }) => {
+  const [selectedDate, setSelectedDate] = useState("");
   const popupRef = useRef<HTMLDivElement>(null);
 
   useOutsideClick(popupRef, onClose);
@@ -62,10 +63,13 @@ export const Modal: FC<ModalProps> = ({
           <DateInput
             label={customInputs.date.label}
             placeholder={customInputs.date.placeholder}
+            value={selectedDate}
+            onChange={(date) => setSelectedDate(date)}
           />
           <TimeInput
             label={customInputs.time.label}
             placeholder={customInputs.time.placeholder}
+            selectedDate={selectedDate}
           />
         </div>
         <div>
