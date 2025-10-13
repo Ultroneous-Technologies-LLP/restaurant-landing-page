@@ -4,9 +4,9 @@ import { FC, useMemo, useRef, useState } from "react";
 
 import { useOutsideClick } from "@/hooks";
 
+import { Clock } from "../../icons";
 import { TimeInputProps } from "./types";
-import { TimeFormate } from "./constant";
-import { Clock } from "../../icons/Clock";
+import { TIME_FORMATE } from "./constant";
 import { CustomInputTextEnum } from "./enum";
 
 export const TimeInput: FC<TimeInputProps> = ({ label, placeholder }) => {
@@ -39,16 +39,20 @@ export const TimeInput: FC<TimeInputProps> = ({ label, placeholder }) => {
     setOpen(false);
   };
 
-  const handleTimeClick = (hour?: string, period?: CustomInputTextEnum) => {
-    if (hour && selectedPeriod) {
-      handleTimeSelect(hour, selectedPeriod);
-    } else if (period && selectedHour) {
-      handleTimeSelect(selectedHour, period);
-    } else if (hour) {
+  const handleHourClick = (hour: string) => {
+    if (!selectedPeriod) {
       setSelectedHour(hour);
-    } else if (period) {
-      setSelectedPeriod(period);
+      return;
     }
+    handleTimeSelect(hour, selectedPeriod);
+  };
+
+  const handlePeriodClick = (period: CustomInputTextEnum) => {
+    if (!selectedHour) {
+      setSelectedPeriod(period);
+      return;
+    }
+    handleTimeSelect(selectedHour, period);
   };
 
   return (
@@ -86,14 +90,14 @@ export const TimeInput: FC<TimeInputProps> = ({ label, placeholder }) => {
                         ? "bg-[#FDF0EE] text-primary-red font-semibold"
                         : "hover:bg-[#FFF2F0]"
                     }`}
-                    onClick={() => handleTimeClick(hour)}
+                    onClick={() => handleHourClick(hour)}
                   >
                     {hour}
                   </div>
                 ))}
               </div>
               <div className="flex flex-col justify-center items-center p-2 space-y-2 sticky top-1">
-                {TimeFormate.map((period: CustomInputTextEnum) => (
+                {TIME_FORMATE.map((period: CustomInputTextEnum) => (
                   <div
                     key={period}
                     className={`w-full text-center py-2 cursor-pointer rounded font-inter text-sm transition-all duration-300 text-black ${
@@ -101,7 +105,9 @@ export const TimeInput: FC<TimeInputProps> = ({ label, placeholder }) => {
                         ? "bg-[#FDF0EE] text-primary-red font-semibold"
                         : "hover:bg-[#FFF2F0]"
                     }`}
-                    onClick={() => handleTimeClick(undefined, period)}
+                    onClick={() =>
+                      handlePeriodClick(period as CustomInputTextEnum)
+                    }
                   >
                     {period}
                   </div>
