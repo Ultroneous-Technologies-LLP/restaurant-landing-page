@@ -3,13 +3,14 @@
 import { FC, useEffect, useRef } from "react";
 
 import { useOutsideClick } from "@/hooks";
-import { Cross } from "@/components/icons";
 
 import { Button } from "../Button";
 import { ModalProps } from "./types";
+import { Options } from "./constant";
 import { DateInput } from "../DateInput";
-import { NumberInput } from "../NumberInput";
 import { TimeInput } from "../TimeInput";
+import { Cross } from "../../icons/Cross";
+import { NumberInput } from "../NumberInput";
 
 export const Modal: FC<ModalProps> = ({
   isOpen,
@@ -57,7 +58,7 @@ export const Modal: FC<ModalProps> = ({
           <NumberInput
             label={customInputs.party.label}
             placeholder={customInputs.party.placeholder}
-            options={["100", "200", "300", "Other"]}
+            options={Options}
           />
           <DateInput
             label={customInputs.date.label}

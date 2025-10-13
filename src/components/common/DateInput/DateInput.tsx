@@ -2,9 +2,8 @@
 
 import { FC, useRef, useState } from "react";
 
-import { Calendar } from "@/components/icons";
-
 import { DateInputProps } from "./types";
+import { Calendar } from "../../icons/Calendar";
 
 export const DateInput: FC<DateInputProps> = ({ label, placeholder }) => {
   const [value, setValue] = useState("");

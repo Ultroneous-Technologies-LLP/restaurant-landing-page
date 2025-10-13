@@ -3,9 +3,9 @@
 import { FC, useState } from "react";
 
 import { useWindowWidth } from "@/hooks";
-import { Modal } from "@/components/common/Modal";
 import data from "@/content/home-page-layout.json";
 
+import { Modal } from "../Modal";
 import { Button } from "../Button";
 import { ModalButtonProps } from "./types";
 
