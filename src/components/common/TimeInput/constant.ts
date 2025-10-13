@@ -1,3 +1,3 @@
 import { CustomInputTextEnum } from "./enum";
 
-export const TimeFormate = [CustomInputTextEnum.AM, CustomInputTextEnum.PM]
+export const TIME_FORMATE = [CustomInputTextEnum.AM, CustomInputTextEnum.PM]
