@@ -22,7 +22,7 @@ export const Video: FC<VideoProps> = ({ alt, poster, src }) => {
             src={poster}
             alt={alt}
             fill
-            className="object-cover"
+            className="object-cover hover:scale-105 duration-500 transition-transform ease-in-out"
             title={alt}
           />
           <button
