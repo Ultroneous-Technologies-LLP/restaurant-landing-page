@@ -1,12 +1,10 @@
 "use client";
 
 import "swiper/css";
-import "swiper/css/effect-fade";
 
 import clsx from "clsx";
 import { FC } from "react";
 import Image from "next/image";
-import { EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { CardProps } from "./types";
@@ -14,12 +12,11 @@ import { CardProps } from "./types";
 export const Card: FC<CardProps> = ({ data, swiperRef, className }) => (
   <div
     className={clsx(
-      "overflow-hidden w-full max-w-129 md:max-w-107.5 xl:max-w-129 rounded-4xl z-10",
+      "overflow-hidden w-full max-w-129 md:max-w-107.5 xl:max-w-129 z-10",
       className
     )}
   >
     <Swiper
-      modules={[EffectFade]}
       effect="fade"
       fadeEffect={{ crossFade: true }}
       speed={2000}
@@ -27,6 +24,7 @@ export const Card: FC<CardProps> = ({ data, swiperRef, className }) => (
         if (swiperRef) swiperRef.current = swiper;
       }}
       slidesPerView={1}
+      spaceBetween={10}
     >
       {data.map(({ id, img, name, role, text }) => {
         return (

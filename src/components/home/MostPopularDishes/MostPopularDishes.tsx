@@ -18,15 +18,15 @@ export const MostPopularDishes: FC<MostPopularDishesProps> = ({
           key={id}
           className="px-3 pt-3 xl:px-4 xl:pt-4 pb-5 w-full max-w-89.5 xl:max-w-101.5 rounded-[30px] bg-[url('/assets/images/card-bg.avif')] bg-center bg-cover bg-no-repeat relative mx-auto"
         >
-          <div className="relative">
+          <div className="relative overflow-hidden rounded-3xl group">
             <Image
               src={image}
               alt={alt}
               width={375}
               height={248}
-              className="object-cover object-center mx-auto"
+              className="object-cover object-center w-full h-auto transition-transform duration-500 ease-in-out group-hover:scale-110"
             />
-            <div className="hover:bg-[#E63A28]/25 absolute inset-0 transition-colors duration-500 ease-in-out rounded-3xl pointer-events-none" />
+            <div className="absolute inset-0 bg-[#E63A28]/0 group-hover:bg-[#E63A28]/30 transition-colors duration-500 ease-in-out" />
           </div>
           <h3 className="font-eugusto text-xl/7.5 xl:text-2xl/6 pt-3 pb-1 xl:pt-10 xl:pb-2.5">
             <span>{title}</span>

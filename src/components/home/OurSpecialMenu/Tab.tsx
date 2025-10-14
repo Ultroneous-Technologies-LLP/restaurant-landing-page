@@ -33,7 +33,8 @@ export const Tab: FC<TabProps> = ({ tabs }) => {
                 "py-4.5 md:py-5 px-6 xl:px-12 xl:py-6 font-proximaNova text-base/4 md:text-sm/3.5 xl:text-2xl/6 transition-colors duration-500 rounded-full",
                 {
                   "bg-primary-red text-white font-bold": isActiveTab,
-                  "bg-[#F6F6F6] text-black": !isActiveTab,
+                  "bg-[#F6F6F6] text-black hover:bg-primary-red hover:text-white":
+                    !isActiveTab,
                 }
               )}
             >
@@ -72,7 +73,7 @@ export const Tab: FC<TabProps> = ({ tabs }) => {
                   width={439}
                   height={410}
                   alt={activeContent.image.alt}
-                  className="rounded-xl object-cover md:max-w-74.5 xl:max-w-110"
+                  className="rounded-xl object-cover md:max-w-74.5 xl:max-w-110 hover:scale-105 duration-500 transition-transform ease-in-out"
                 />
               </div>
             )}
