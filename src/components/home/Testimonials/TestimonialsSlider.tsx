@@ -12,6 +12,10 @@ export const TestimonialsSlider: FC<TestimonialsSliderProps> = ({ data }) => {
   const topSwiperRef = useRef<SwiperType>(null);
   const bottomSwiperRef = useRef<SwiperType>(null);
 
+  const mid = Math.ceil(data.length / 2);
+  const topData = data.slice(0, mid);
+  const bottomData = data.slice(mid);
+
   const handlePrev = () => {
     topSwiperRef.current?.slidePrev();
     bottomSwiperRef.current?.slidePrev();
@@ -26,16 +30,16 @@ export const TestimonialsSlider: FC<TestimonialsSliderProps> = ({ data }) => {
     <>
       {/* Top Slider Card */}
       <Card
-        data={data}
+        data={topData}
         swiperRef={topSwiperRef}
         className="md:absolute md:-top-11 md:left-5 xl:top-0 xl:left-0 mb-8 md:mb-0"
       />
 
       {/* Bottom Slider Card */}
       <Card
-        data={data}
+        data={bottomData}
         swiperRef={bottomSwiperRef}
-        className="md:absolute md:-bottom-19.5 md:right-7 xL:bottom-0 xl:right-0 mb-8 md:mb-0"
+        className="md:absolute md:-bottom-19.5 md:right-7 xl:bottom-0 xl:right-0 mb-8 md:mb-0"
       />
 
       {/* Button */}

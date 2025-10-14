@@ -54,7 +54,7 @@
       }
     },
     "heading": "Living well Begins with Eating Well",
-    "description": "Duis nec semper ligula. Nullam nec justo vel metus gravida consequat. Suspendisse potenti. Quisque fermentum, nisl vitae auctor commodo, justo metus tincidunt elit.",
+    "description": "Savor every bite with fresh ingredients and rich flavors crafted to delight. Experience dining that nourishes both body and soul in every dish we serve.",
     "cards": [
       {
         "id": 1,
@@ -64,7 +64,7 @@
           "alt": "Online order icon"
         },
         "title": "Online Order",
-        "description": "Duis nec semper ligula. Nullam nec."
+        "description": "Order your favorite meals anytime."
       },
       {
         "id": 2,
@@ -74,7 +74,7 @@
           "alt": "Service icon"
         },
         "title": "24/7 Services",
-        "description": "Duis nec semper ligula. Nullam nec."
+        "description": "Always here to serve you."
       }
     ],
     "cta": {
@@ -89,7 +89,7 @@
       "alt": "background"
     },
     "heading": "Quality Comes First",
-    "description": "Duis nec semper ligula. Nullam nec justo vel metus gravida consequat. Suspendisse potenti. Quisque fermentum, nisl vitae auctor commodo, justo metus tincidunt elit,",
+    "description": "At our restaurant, quality always comes first. Every dish is prepared with the finest ingredients, expert craftsmanship, and a passion for perfection to deliver an unforgettable dining experience.",
     "circle": {
       "image": {
         "id": 1,
@@ -105,7 +105,7 @@
       {
         "id": 1,
         "title": "Risotto",
-        "description": "Duis nec semper ligula. Nullam nec justo vel metus gravida consequat.",
+        "description": "Creamy Arborio rice infused with rich flavors and finished with Parmesan delight.",
         "price": "$30.00",
         "image": "/assets/images/food-risotto.avif",
         "alt": ""
@@ -113,38 +113,38 @@
       {
         "id": 2,
         "title": "Polenta",
-        "description": "Duis nec semper ligula. Nullam nec justo vel metus gravida consequat.",
-        "price": "$30.00",
+        "description": "Smooth cornmeal with herbs and cheese for a comforting classic taste.",
+        "price": "$40.00",
         "image": "/assets/images/food-polenta.avif",
         "alt": ""
       },
       {
         "id": 3,
         "title": "Truffles",
-        "description": "Duis nec semper ligula. Nullam nec justo vel metus gravida consequat.",
-        "price": "$30.00",
+        "description": "Rich, earthy flavor blended with creamy texture for an elegant gourmet taste.",
+        "price": "$20.00",
         "image": "/assets/images/food-truffles.avif",
         "alt": ""
       }
     ]
   },
   "extraordinaryExperienceSection": {
-    "title": "An Extraordinary Experience for all",
+    "title": "An Extraordinary Experience for All",
     "items": [
       {
         "id": 1,
         "title": "Passionate Chef",
-        "description": "Rosoi is one of the most popular Restaurant & Special menu made by our passionate chefs and quality which can impress you"
+        "description": "Our skilled chefs craft each dish with love, blending creativity and flavor to deliver an unforgettable dining experience."
       },
       {
         "id": 2,
         "title": "100% Fresh Food",
-        "description": "Rosoi is one of the most popular Restaurant & special menu made by our passionate chefs and quality which can impress you"
+        "description": "We use only the freshest, locally sourced ingredients to ensure every meal bursts with authentic taste and superior quality."
       },
       {
         "id": 3,
         "title": "Memorable Ambience",
-        "description": "Rosoi is one of the most popular Restaurant & special menu made by our passionate chefs and quality which can impress you"
+        "description": "Enjoy warm lighting, inviting decor, and a cozy atmosphere designed to make every dining moment truly special and relaxing."
       }
     ],
     "video": {
@@ -414,22 +414,36 @@
   },
   "testimonialsSection": {
     "title": "Testimonials",
-    "description": "What our Customers Says",
-    "longDescription": "Duis nec semper ligula. Nullam nec justo vel metus gravida consequat. Suspendisse potenti. Quisque fermentum, nisl vitae auctor commodo, justo metus tincidunt elit,",
+    "description": "What Our Customers Say",
+    "longDescription": "At Rosoi, we take pride in creating delightful dining experiences. Every meal is crafted with passion, using fresh ingredients and authentic flavors that keep our guests coming back for more.",
     "customersSays": [
       {
         "id": 1,
         "name": "Alex Methew",
         "role": "Customer",
         "img": "/assets/images/alex-methew.avif",
-        "text": "Rosoi is one of the most popular and tasty Restaurant with unique & special test food menu made by our passionate chefs with love and quality."
+        "text": "Rosoi offers an exceptional dining experience with dishes full of flavor, freshness, and creativity—crafted with passion by our talented chefs."
       },
       {
         "id": 2,
         "name": "Grill",
-        "role": "Customer-2",
+        "role": "Customer",
         "img": "/assets/images/grill.avif",
-        "text": "Rosoi is one of the most popular and tasty Restaurant with unique & special test food menu made by our passionate chefs with love and quality."
+        "text": "The food at Rosoi is always delicious and beautifully prepared. Every bite shows the care and quality that make this place truly special."
+      },
+      {
+        "id": 3,
+        "name": "Grill",
+        "role": "Customer",
+        "img": "/assets/images/grill.avif",
+        "text": "The food at Rosoi is always delicious and beautifully prepared. Every bite shows the care and quality that make this place truly special."
+      },
+      {
+        "id": 4,
+        "name": "Alex Methew",
+        "role": "Customer",
+        "img": "/assets/images/alex-methew.avif",
+        "text": "Rosoi offers an exceptional dining experience with dishes full of flavor, freshness, and creativity—crafted with passion by our talented chefs."
       }
     ]
   },
