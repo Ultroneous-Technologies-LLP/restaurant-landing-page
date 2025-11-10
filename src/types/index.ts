@@ -1,5 +1,7 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
+export type SocialIconNameType = "Dribble" | "Instagram" | "BeHance" | "LinkedIn";
+
 type ButtonVariants = "primary" | "outline";
 
 export interface ImageTypes {
