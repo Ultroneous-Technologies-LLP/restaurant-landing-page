@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { FC, PropsWithChildren } from "react";
 
-import data from "@/content/layout.json";
+import { Footer, Header } from "@/components";
 import { eugusto, inter, jomolHari, proximaNova } from "@/constants";
-import { Footer, Header, SocialIconNameType } from "@/components/layout";
+import data from "@/content/layout.json";
+import { SocialIconNameType } from "@/types";
 
 import "../../styles/globals.css";
+
 import { LayoutProps } from "./types";
 
 export const metadata: Metadata = {
@@ -31,24 +34,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   const { footer }: LayoutProps = {
     footer: {
       ...data.footer,
       socialLinks: data.footer.socialLinks.map((link) => ({
         ...link,
-        // Assert type safely
         icon: link.icon as SocialIconNameType,
       })),
     },
   };
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html className="scroll-smooth" lang="en">
       <body
         className={`${jomolHari.variable} ${inter.variable} ${proximaNova.variable} ${eugusto.variable} antialiased`}
       >
@@ -58,4 +56,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
