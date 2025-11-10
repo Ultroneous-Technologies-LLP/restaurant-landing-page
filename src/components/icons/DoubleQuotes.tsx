@@ -1,12 +1,18 @@
-import { SVGProps } from "react";
+import { JSX, SVGProps } from "react";
 
-export const DoubleQuotes = ({ width = 26, height = 22, ...svgProps }: SVGProps<SVGSVGElement>) => (
+import { ICON_SIZE_0, ICON_SIZE_22, ICON_SIZE_26 } from "./constant";
+
+export const DoubleQuotes = ({
+  width = ICON_SIZE_26,
+  height = ICON_SIZE_22,
+  ...svgProps
+}: SVGProps<SVGSVGElement>): JSX.Element => (
   <svg
-    width={width}
-    height={height}
-    viewBox="0 0 26 22"
     fill="none"
+    height={height}
     role="img"
+    viewBox={`${ICON_SIZE_0} ${ICON_SIZE_0} ${ICON_SIZE_26} ${ICON_SIZE_22}`}
+    width={width}
     xmlns="http://www.w3.org/2000/svg"
     {...svgProps}
   >
