@@ -1,6 +1,6 @@
 export interface TitleProps {
-  as?: "h1" | "h2";
-  isMainTitle?: boolean;
   title: string;
+  as?: "h1" | "h2";
   className?: string;
+  isMainTitle?: boolean;
 }

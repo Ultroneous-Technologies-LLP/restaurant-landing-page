@@ -1,23 +1,29 @@
 "use client";
 
 import { FC, useRef } from "react";
-import { DateInputProps } from "./types";
+
 import { Calendar } from "../../icons";
+
+import { DateInputProps } from "./types";
+
+const ISO_DATE_INDEX = 0;
 
 export const DateInput: FC<DateInputProps> = ({ label, placeholder, onChange, value }) => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const today = new Date().toISOString().split("T")[0];
+  const today = new Date().toISOString().split("T")[`${ISO_DATE_INDEX}`];
 
-  const openCalendar = () => {
-    if (!inputRef.current) return;
+  const openCalendar = (): void => {
+    if (!inputRef.current) {
+      return;
+    }
 
-    inputRef.current.showPicker?.();
+    inputRef.current.showPicker();
     inputRef.current.focus();
   };
 
   return (
     <div className="mb-4">
-      <label htmlFor={label} className="font-inter inline-block pb-2 text-base/4 font-medium">
+      <label className="font-inter inline-block pb-2 text-base/4 font-medium" htmlFor={label}>
         {label}
       </label>
       <div
@@ -28,14 +34,16 @@ export const DateInput: FC<DateInputProps> = ({ label, placeholder, onChange, va
           <Calendar className="cursor-pointer" />
         </div>
         <input
-          ref={inputRef}
-          id={label}
-          type="date"
           className="font-inter text-quick-silver w-full cursor-pointer bg-transparent text-base/4 focus:outline-none"
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          placeholder={placeholder}
+          id={label}
           min={today}
+          onChange={(e) => {
+            onChange(e.target.value);
+          }}
+          placeholder={placeholder}
+          ref={inputRef}
+          type="date"
+          value={value}
         />
       </div>
     </div>

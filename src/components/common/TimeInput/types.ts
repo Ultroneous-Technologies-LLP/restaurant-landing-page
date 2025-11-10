@@ -1,6 +1,6 @@
 export interface TimeInputProps {
   label: string;
-  placeholder?: string;
   options?: string[] | number[];
+  placeholder?: string;
   selectedDate?: string;
 }

@@ -4,14 +4,15 @@ import { FC, useEffect, useRef, useState } from "react";
 
 import { useOutsideClick } from "@/hooks";
 
-import { Title } from "../Title";
-import { Button } from "../Button";
 import { Cross } from "../../icons";
-import { ModalProps } from "./types";
-import { OPTIONS } from "./constant";
+import { Button } from "../Button";
 import { DateInput } from "../DateInput";
-import { TimeInput } from "../TimeInput";
 import { NumberInput } from "../NumberInput";
+import { TimeInput } from "../TimeInput";
+import { Title } from "../Title";
+
+import { OPTIONS } from "./constant";
+import { ModalProps } from "./types";
 
 export const Modal: FC<ModalProps> = ({
   isOpen,
@@ -30,22 +31,24 @@ export const Modal: FC<ModalProps> = ({
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
 
-    return () => {
+    return (): void => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
+  if (!isOpen) {
+    return null;
+  }
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
       <div
-        ref={popupRef}
         className="hidden-scroll-bar relative h-160 w-full max-w-180 overflow-y-scroll rounded-lg bg-white p-12.5 shadow-lg"
+        ref={popupRef}
       >
         <div className="flex items-start justify-between gap-1.5 ">
           <div>
-            <Title title={title} className="pb-2" />
+            <Title className="pb-2" title={title} />
             <p className="font-proximaNova text-dark-silver text-sm/5">
               <span>{description}</span>
             </p>
@@ -57,14 +60,16 @@ export const Modal: FC<ModalProps> = ({
         <div className="space-y-4 pt-12">
           <NumberInput
             label={customInputs.party.label}
-            placeholder={customInputs.party.placeholder}
             options={OPTIONS}
+            placeholder={customInputs.party.placeholder}
           />
           <DateInput
             label={customInputs.date.label}
+            onChange={(date) => {
+              setSelectedDate(date);
+            }}
             placeholder={customInputs.date.placeholder}
             value={selectedDate}
-            onChange={(date) => setSelectedDate(date)}
           />
           <TimeInput
             label={customInputs.time.label}

@@ -2,12 +2,15 @@
 
 import { FC, useState } from "react";
 
-import { useWindowWidth } from "@/hooks";
 import data from "@/content/home-page-layout.json";
+import { useWindowWidth } from "@/hooks";
 
-import { Modal } from "../Modal";
 import { Button } from "../Button";
+import { Modal } from "../Modal";
+
 import { ModalButtonProps } from "./types";
+
+const BREAKPOINT_XL = 1280;
 
 export const ModalButton: FC<ModalButtonProps> = ({ isPopup = true, children, ...buttonProps }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -15,12 +18,23 @@ export const ModalButton: FC<ModalButtonProps> = ({ isPopup = true, children, ..
 
   return (
     <>
-      <Button {...buttonProps} onClick={() => setIsPopupOpen(true)}>
+      <Button
+        {...buttonProps}
+        onClick={() => {
+          setIsPopupOpen(true);
+        }}
+      >
         {children}
       </Button>
 
-      {isPopup && isResize > 1280 && (
-        <Modal isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} {...data.popUpSection} />
+      {isPopup && isResize > BREAKPOINT_XL && (
+        <Modal
+          isOpen={isPopupOpen}
+          onClose={() => {
+            setIsPopupOpen(false);
+          }}
+          {...data.popUpSection}
+        />
       )}
     </>
   );
