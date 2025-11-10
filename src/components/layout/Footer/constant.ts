@@ -5,4 +5,4 @@ export const ICONS = {
   Instagram,
   BeHance,
   LinkedIn,
-}
+};

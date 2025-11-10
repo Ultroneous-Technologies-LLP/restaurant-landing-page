@@ -6,10 +6,10 @@
   --font-proximaNova: var(--font-proximaNova);
   --font-eugusto: var(--font-eugusto);
 
-  --text-32px:32px;
-  --text-50px:50px;
+  --text-32px: 32px;
+  --text-50px: 50px;
 
-  --shadow-custom:0 3px 10px 0 #00000014;
+  --shadow-custom: 0 3px 10px 0 #00000014;
 
   --color-seashell: #fff2f0;
   --color-primary-red: #e83c2a;

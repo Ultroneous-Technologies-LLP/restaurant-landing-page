@@ -1,9 +1,8 @@
 import { CtaButtonType, ImageTypes } from "@/types";
 
-
 interface Images {
-   food1: ImageTypes;
-    food2: ImageTypes;
+  food1: ImageTypes;
+  food2: ImageTypes;
 }
 
 export interface EatingWellCard {

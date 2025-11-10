@@ -1,10 +1,6 @@
 import { SVGProps } from "react";
 
-export const Calendar = ({
-  width = 20,
-  height = 23,
-  ...svgProps
-}: SVGProps<SVGSVGElement>) => (
+export const Calendar = ({ width = 20, height = 23, ...svgProps }: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 20 23"
     fill="none"

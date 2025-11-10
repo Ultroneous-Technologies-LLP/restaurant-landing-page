@@ -8,11 +8,7 @@ import { Clock } from "../../icons";
 import { TimeInputProps } from "./types";
 import { TIME_FORMATE } from "./constant";
 
-export const TimeInput: FC<TimeInputProps> = ({
-  label,
-  placeholder,
-  selectedDate,
-}) => {
+export const TimeInput: FC<TimeInputProps> = ({ label, placeholder, selectedDate }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -39,66 +35,59 @@ export const TimeInput: FC<TimeInputProps> = ({
 
   return (
     <div className="mb-4">
-      <label
-        htmlFor={label}
-        className="pb-2 font-inter font-medium text-base/4 inline-block"
-      >
+      <label htmlFor={label} className="font-inter inline-block pb-2 text-base/4 font-medium">
         {label}
       </label>
       <div
         ref={dropdownRef}
-        className="p-4 border border-chinese-silver rounded-full flex gap-4 items-center relative cursor-pointer"
+        className="border-chinese-silver relative flex cursor-pointer items-center gap-4 rounded-full border p-4"
       >
-        <div className="size-8 bg-seashell rounded-lg flex justify-center items-center">
+        <div className="bg-seashell flex size-8 items-center justify-center rounded-lg">
           <Clock onClick={handleDropdownToggle} />
         </div>
         <input
           id={label}
-          className="font-inter text-base/4 text-quick-silver placeholder:text-quick-silver focus:outline-none w-full cursor-pointer bg-transparent"
+          className="font-inter text-quick-silver placeholder:text-quick-silver w-full cursor-pointer bg-transparent text-base/4 focus:outline-none"
           placeholder={placeholder}
           value={selectedTimeValue}
           readOnly
           onClick={handleDropdownToggle}
         />
         {isDropdownOpen && timeOptions.length > 0 && (
-          <div className="absolute top-12.5 left-4 mt-2 max-w-50 w-full bg-white shadow-custom z-50 rounded-lg overflow-hidden">
-            <div className="overflow-y-auto max-h-45 grid grid-cols-2 items-start">
-              <div className="p-2 space-y-1">
+          <div className="shadow-custom absolute top-12.5 left-4 z-50 mt-2 w-full max-w-50 overflow-hidden rounded-lg bg-white">
+            <div className="grid max-h-45 grid-cols-2 items-start overflow-y-auto">
+              <div className="space-y-1 p-2">
                 {timeOptions.map(({ key, hour, period, disabled }) => (
                   <div
                     key={key}
-                    className={`p-2 rounded font-inter text-sm text-center transition-all duration-300 ${
+                    className={`font-inter rounded p-2 text-center text-sm transition-all duration-300 ${
                       disabled && !isChristmas
-                        ? "text-gray-400 cursor-not-allowed"
+                        ? "cursor-not-allowed text-gray-400"
                         : selectedHour === hour && selectedPeriod === period
-                          ? "bg-[#FDF0EE] text-primary-red font-semibold"
+                          ? "text-primary-red bg-[#FDF0EE] font-semibold"
                           : "hover:bg-seashell cursor-pointer"
                     }`}
-                    onClick={() =>
-                      (!disabled || isChristmas) &&
-                      handleTimeSelect(hour, period)
-                    }
+                    onClick={() => (!disabled || isChristmas) && handleTimeSelect(hour, period)}
                   >
                     {hour}
                   </div>
                 ))}
               </div>
-              <div className="flex flex-col justify-center items-center p-2 space-y-2 sticky top-1">
+              <div className="sticky top-1 flex flex-col items-center justify-center space-y-2 p-2">
                 {TIME_FORMATE.map((period) => {
-                  const isAvailable =
-                    availablePeriods.has(period) || isChristmas;
+                  const isAvailable = availablePeriods.has(period) || isChristmas;
 
                   return (
                     <div
                       key={period}
-                      className={`w-full text-center py-2 rounded font-inter text-sm transition-all duration-300 ${
+                      className={`font-inter w-full rounded py-2 text-center text-sm transition-all duration-300 ${
                         isAvailable
-                          ? `cursor-pointer hover:bg-seashell ${
+                          ? `hover:bg-seashell cursor-pointer ${
                               selectedPeriod === period
-                                ? "bg-[#FDF0EE] text-primary-red font-semibold"
+                                ? "text-primary-red bg-[#FDF0EE] font-semibold"
                                 : ""
                             }`
-                          : "text-gray-400 cursor-not-allowed"
+                          : "cursor-not-allowed text-gray-400"
                       }`}
                       onClick={() => isAvailable && handlePeriodSelect(period)}
                     >

@@ -12,25 +12,25 @@ export const ExtraordinaryExperience: FC<ExtraordinaryExperienceProps> = ({
 }) => (
   <Container
     backgroundClassName="bg-primary-red relative"
-    className="pt-20 pb-37 xl:pt-25 xl:pb-110 px-4 md:px-6 xl:px-18"
+    className="px-4 pt-20 pb-37 md:px-6 xl:px-18 xl:pt-25 xl:pb-110"
   >
     <Title
       title={title}
-      className="text-white max-w-89.5 md:max-w-64 mx-auto md:ml-0 md:mr-auto xl:max-w-99 pb-8 xl:pb-25"
+      className="mx-auto max-w-89.5 pb-8 text-white md:mr-auto md:ml-0 md:max-w-64 xl:max-w-99 xl:pb-25"
     />
-    <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-12">
+    <div className="flex flex-col justify-between gap-6 md:flex-row md:gap-12">
       {items.map(({ description, id, title }) => (
-        <div className="xl:max-w-76 w-full" key={id}>
-          <h3 className="font-eugusto text-white text-xl/7.5 xl:text-2xl/7.5 pb-2 xl:pb-2.5">
+        <div className="w-full xl:max-w-76" key={id}>
+          <h3 className="font-eugusto pb-2 text-xl/7.5 text-white xl:pb-2.5 xl:text-2xl/7.5">
             <span>{title}</span>
           </h3>
-          <p className="font-proximaNova text-white text-sm/5 xl:text-lg/7.5">
+          <p className="font-proximaNova text-sm/5 text-white xl:text-lg/7.5">
             <span>{description}</span>
           </p>
         </div>
       ))}
     </div>
-    <div className="absolute left-1/2 -translate-x-1/2 -bottom-25 md:-bottom-75 xl:-bottom-88 w-full">
+    <div className="absolute -bottom-25 left-1/2 w-full -translate-x-1/2 md:-bottom-75 xl:-bottom-88">
       <Video alt={video.alt} poster={video.poster} src={video.src} />
     </div>
   </Container>

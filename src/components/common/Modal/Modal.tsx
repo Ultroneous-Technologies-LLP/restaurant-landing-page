@@ -38,15 +38,15 @@ export const Modal: FC<ModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
       <div
         ref={popupRef}
-        className="bg-white p-12.5 rounded-lg shadow-lg w-full max-w-180 h-160 relative overflow-y-scroll hidden-scroll-bar"
+        className="hidden-scroll-bar relative h-160 w-full max-w-180 overflow-y-scroll rounded-lg bg-white p-12.5 shadow-lg"
       >
-        <div className="flex gap-1.5 justify-between items-start ">
+        <div className="flex items-start justify-between gap-1.5 ">
           <div>
             <Title title={title} className="pb-2" />
-            <p className="font-proximaNova text-sm/5 text-dark-silver">
+            <p className="font-proximaNova text-dark-silver text-sm/5">
               <span>{description}</span>
             </p>
           </div>
@@ -54,7 +54,7 @@ export const Modal: FC<ModalProps> = ({
             <Cross />
           </button>
         </div>
-        <div className="pt-12 space-y-4">
+        <div className="space-y-4 pt-12">
           <NumberInput
             label={customInputs.party.label}
             placeholder={customInputs.party.placeholder}
@@ -73,12 +73,12 @@ export const Modal: FC<ModalProps> = ({
           />
         </div>
         <div>
-          <Button className="px-6 mt-12" variant="primary">
+          <Button className="mt-12 px-6" variant="primary">
             {ctaButton.label}
           </Button>
         </div>
-        <p className="mt-12 text-sm/3.5 font-inter text-dark-silver">
-          <span className="inline-block pr-2 border-r border-dark-silver">
+        <p className="font-inter text-dark-silver mt-12 text-sm/3.5">
+          <span className="border-dark-silver inline-block border-r pr-2">
             {dinnerServices.monToSaturday}
           </span>
           <span className="inline-block pl-2">{dinnerServices.sunday}</span>

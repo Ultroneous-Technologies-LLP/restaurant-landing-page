@@ -1,10 +1,6 @@
 import React, { SVGProps } from "react";
 
-export const Dropdown = ({
-  width = 18,
-  height = 10,
-  ...svgProps
-}: SVGProps<SVGSVGElement>) => (
+export const Dropdown = ({ width = 18, height = 10, ...svgProps }: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 18 10"
     width={width}

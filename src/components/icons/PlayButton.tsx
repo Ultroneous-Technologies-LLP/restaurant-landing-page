@@ -1,10 +1,6 @@
 import { SVGProps } from "react";
 
-export const PlayButton = ({
-  width = 18,
-  height = 20,
-  ...svgProps
-}: SVGProps<SVGSVGElement>) => (
+export const PlayButton = ({ width = 18, height = 20, ...svgProps }: SVGProps<SVGSVGElement>) => (
   <svg
     width={width}
     height={height}

@@ -1,10 +1,6 @@
 import { SVGProps } from "react";
 
-export const Clock = ({
-  width = 22,
-  height = 23,
-  ...svgProps
-}: SVGProps<SVGSVGElement>) => (
+export const Clock = ({ width = 22, height = 23, ...svgProps }: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 22 23"
     fill="none"
