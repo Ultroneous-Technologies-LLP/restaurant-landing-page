@@ -1,19 +1,19 @@
 import { CtaButtonType, ImageTypes } from "@/types";
 
 interface OpeningHours {
-  id: number;
   day: string;
+  id: number;
   timing: string;
 }
 
 interface OpeningHour {
-  title: string;
   openingHours: OpeningHours[];
+  title: string;
 }
 
 export interface AnyPlanProps {
-  title: string;
+  button: CtaButtonType;
   image: ImageTypes;
   openingHour: OpeningHour;
-  button: CtaButtonType;
+  title: string;
 }

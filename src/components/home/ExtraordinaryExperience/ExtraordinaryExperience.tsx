@@ -2,8 +2,8 @@ import { FC } from "react";
 
 import { Container, Title } from "@/components/common";
 
-import { Video } from "./Video";
 import { ExtraordinaryExperienceProps } from "./types";
+import { Video } from "./Video";
 
 export const ExtraordinaryExperience: FC<ExtraordinaryExperienceProps> = ({
   items,
@@ -15,14 +15,14 @@ export const ExtraordinaryExperience: FC<ExtraordinaryExperienceProps> = ({
     className="px-4 pt-20 pb-37 md:px-6 xl:px-18 xl:pt-25 xl:pb-110"
   >
     <Title
-      title={title}
       className="mx-auto max-w-89.5 pb-8 text-white md:mr-auto md:ml-0 md:max-w-64 xl:max-w-99 xl:pb-25"
+      title={title}
     />
     <div className="flex flex-col justify-between gap-6 md:flex-row md:gap-12">
-      {items.map(({ description, id, title }) => (
+      {items.map(({ description, id, title: itemsTitle }) => (
         <div className="w-full xl:max-w-76" key={id}>
           <h3 className="font-eugusto pb-2 text-xl/7.5 text-white xl:pb-2.5 xl:text-2xl/7.5">
-            <span>{title}</span>
+            <span>{itemsTitle}</span>
           </h3>
           <p className="font-proximaNova text-sm/5 text-white xl:text-lg/7.5">
             <span>{description}</span>

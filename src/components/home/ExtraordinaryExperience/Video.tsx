@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { FC, useState } from "react";
 
-import { PlayButton } from "@/components/icons";
+import { PlayButton } from "@/components";
 
 import { VideoProps } from "./types";
 
@@ -12,24 +12,26 @@ export const Video: FC<VideoProps> = ({ alt, poster, src }) => {
 
   return (
     <div
+      aria-labelledby="our-process-title our-process-description"
       className="relative mx-auto h-55 w-[90%] max-w-323.5 overflow-hidden rounded-3xl md:h-102 xl:h-174 xl:rounded-[50px]"
       role="group"
-      aria-labelledby="our-process-title our-process-description"
     >
       {!isPlaying ? (
         <div className="relative h-full w-full rounded-2xl">
           <Image
-            src={poster}
             alt={alt}
-            fill
             className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+            fill
+            src={poster}
             title={alt}
           />
           <button
-            onClick={() => setIsPlaying(true)}
+            aria-label="Play video: Demo video"
             className="absolute inset-0 m-auto flex size-12 cursor-pointer items-center justify-center rounded-full bg-white shadow-[0_0_0_10px_#FFFFFF66]
              transition xl:size-24 xl:shadow-[0_0_0_20px_#FFFFFF66]"
-            aria-label="Play video: Demo video"
+            onClick={() => {
+              setIsPlaying(true);
+            }}
           >
             <PlayButton
               aria-hidden="true"
@@ -40,11 +42,11 @@ export const Video: FC<VideoProps> = ({ alt, poster, src }) => {
         </div>
       ) : (
         <video
-          src={src}
-          controls
+          aria-label="Video player: Demo video"
           autoPlay
           className="h-full w-full object-cover"
-          aria-label="Video player: Demo video"
+          controls
+          src={src}
         />
       )}
     </div>
