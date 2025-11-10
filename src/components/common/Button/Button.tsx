@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { FC } from "react";
 
-import { ButtonProps } from "@/components/types";
+import { ButtonProps } from "@/types";
 
 export const Button: FC<ButtonProps> = ({
   variant = "primary",
