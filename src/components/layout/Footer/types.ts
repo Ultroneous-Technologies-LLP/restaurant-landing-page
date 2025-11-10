@@ -1,15 +1,12 @@
 import { ImageTypes, SocialIconNameType } from "@/types";
-interface SocialLink {
-  id: number;
-  href: string;
-  label: string;
-  icon: SocialIconNameType;
-}
 
 interface NavLinks {
+  href: string;
   id: number;
-  links: string;
-  title: string;
+  label: string;
+}
+interface SocialLink extends NavLinks {
+  icon: SocialIconNameType;
 }
 
 export interface FooterProps {
