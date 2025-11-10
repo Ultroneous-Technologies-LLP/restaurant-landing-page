@@ -1,10 +1,6 @@
 import { SVGProps } from "react";
 
-export const Dribble = ({
-  width = 25,
-  height = 25,
-  ...svgProps
-}: SVGProps<SVGSVGElement>) => (
+export const Dribble = ({ width = 25, height = 25, ...svgProps }: SVGProps<SVGSVGElement>) => (
   <svg
     width={width}
     height={height}

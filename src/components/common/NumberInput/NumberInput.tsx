@@ -8,11 +8,7 @@ import { Dropdown } from "../../icons";
 import { NumberInputProps } from "./types";
 import { NumberInputTextEnum } from "./enum";
 
-export const NumberInput: FC<NumberInputProps> = ({
-  label,
-  options,
-  placeholder,
-}) => {
+export const NumberInput: FC<NumberInputProps> = ({ label, options, placeholder }) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
 
@@ -25,9 +21,7 @@ export const NumberInput: FC<NumberInputProps> = ({
 
     if (value.trim() === "") return opts;
 
-    return opts.filter((opt) =>
-      opt.toString().toLowerCase().includes(value.toLowerCase())
-    );
+    return opts.filter((opt) => opt.toString().toLowerCase().includes(value.toLowerCase()));
   }, [options, value]);
 
   const handleDropdownSelect = (val: string | number) => {
@@ -36,18 +30,15 @@ export const NumberInput: FC<NumberInputProps> = ({
   };
   return (
     <div className="mb-4">
-      <label
-        htmlFor={label}
-        className="pb-2 font-inter font-medium text-base/4 inline-block"
-      >
+      <label htmlFor={label} className="font-inter inline-block pb-2 text-base/4 font-medium">
         {label}
       </label>
       <div
         ref={dropdownRef}
-        className="p-4 border border-chinese-silver rounded-full flex gap-4 items-center relative cursor-pointer"
+        className="border-chinese-silver relative flex cursor-pointer items-center gap-4 rounded-full border p-4"
       >
         <div
-          className="size-8 bg-seashell rounded-lg flex justify-center items-center"
+          className="bg-seashell flex size-8 items-center justify-center rounded-lg"
           onClick={() => setOpen((prev) => !prev)}
         >
           <Dropdown />
@@ -55,27 +46,27 @@ export const NumberInput: FC<NumberInputProps> = ({
         <input
           id={label}
           type="text"
-          className="font-inter text-base/4 text-quick-silver placeholder:text-quick-silver focus:outline-none w-full"
+          className="font-inter text-quick-silver placeholder:text-quick-silver w-full text-base/4 focus:outline-none"
           placeholder={placeholder}
           value={value}
           onChange={(e) => setValue(e.target.value)}
           onClick={() => setOpen(true)}
         />
         {open && (
-          <div className="absolute top-12.5 left-4 mt-2 max-w-50 w-full bg-white shadow-custom z-50 rounded-lg overflow-hidden">
-            <div className="overflow-y-auto max-h-45 p-2">
+          <div className="shadow-custom absolute top-12.5 left-4 z-50 mt-2 w-full max-w-50 overflow-hidden rounded-lg bg-white">
+            <div className="max-h-45 overflow-y-auto p-2">
               {filteredOptions.length > 0 ? (
                 filteredOptions.map((opt) => (
                   <div
                     key={opt}
-                    className="p-3 cursor-pointer rounded font-inter text-sm transition-all hover:font-semibold hover:text-primary-red"
+                    className="font-inter hover:text-primary-red cursor-pointer rounded p-3 text-sm transition-all hover:font-semibold"
                     onClick={() => handleDropdownSelect(opt)}
                   >
                     {opt}
                   </div>
                 ))
               ) : (
-                <div className="p-3 text-quick-silver text-sm font-inter">
+                <div className="text-quick-silver font-inter p-3 text-sm">
                   {NumberInputTextEnum.NO_OPTION_FOUND}
                 </div>
               )}

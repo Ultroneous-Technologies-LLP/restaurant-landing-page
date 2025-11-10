@@ -1,10 +1,6 @@
 import { SVGProps } from "react";
 
-export const DoubleQuotes = ({
-  width = 26,
-  height = 22,
-  ...svgProps
-}: SVGProps<SVGSVGElement>) => (
+export const DoubleQuotes = ({ width = 26, height = 22, ...svgProps }: SVGProps<SVGSVGElement>) => (
   <svg
     width={width}
     height={height}

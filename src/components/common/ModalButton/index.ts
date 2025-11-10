@@ -1,3 +1,3 @@
-export * from './ModalButton';
+export * from "./ModalButton";
 
-export type {ModalButtonProps} from './types'
+export type { ModalButtonProps } from "./types";

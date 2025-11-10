@@ -4,8 +4,6 @@ import { useState, useMemo, useEffect, useCallback } from "react";
 
 import { CustomInputTextEnum } from "@/components/common";
 
-
-
 const SECONDS = 60;
 const HALFDAY = 12;
 const CHRISTMAS_MONTH = 11;
@@ -26,16 +24,11 @@ const generateTimeSlots = (selectedDate: string) => {
     date.getMonth() === today.getMonth() &&
     date.getDate() === today.getDate();
 
-  const isChristmas =
-    date.getMonth() === CHRISTMAS_MONTH && date.getDate() === CHRISTMAS_DATE;
+  const isChristmas = date.getMonth() === CHRISTMAS_MONTH && date.getDate() === CHRISTMAS_DATE;
   const isSunday = date.getDay() === 0;
 
   const start = isChristmas ? CHRISTMAS_START_TIME : DEFAULT_START_TIME;
-  const end = isChristmas
-    ? CHRISTMAS_END_TIME
-    : isSunday
-      ? SUNDAY_END_TIME
-      : DEFAULT_END_TIME;
+  const end = isChristmas ? CHRISTMAS_END_TIME : isSunday ? SUNDAY_END_TIME : DEFAULT_END_TIME;
 
   const nowMinutes = today.getHours() * SECONDS + today.getMinutes();
   const startMinutes = start.h * SECONDS + start.m;
@@ -47,15 +40,13 @@ const generateTimeSlots = (selectedDate: string) => {
     const hour24 = Math.floor(t / SECONDS);
     const minute = t % SECONDS;
 
-    const disabled =
-      (isToday && t <= nowMinutes && !isChristmas) || t < startMinutes;
+    const disabled = (isToday && t <= nowMinutes && !isChristmas) || t < startMinutes;
 
     const hour12 = ((hour24 + CHRISTMAS_MONTH) % HALFDAY) + 1;
     const formattedHour = hour12.toString().padStart(2, "0");
     const formattedMinute = minute.toString().padStart(2, "0");
 
-    const period =
-      hour24 >= HALFDAY ? CustomInputTextEnum.PM : CustomInputTextEnum.AM;
+    const period = hour24 >= HALFDAY ? CustomInputTextEnum.PM : CustomInputTextEnum.AM;
 
     slots.push({
       key: `${formattedHour}:${formattedMinute}-${period}`,
@@ -66,18 +57,15 @@ const generateTimeSlots = (selectedDate: string) => {
   }
 
   return slots;
-}
+};
 
 export const useTimeInput = (selectedDate?: string) => {
   const [selectedHour, setSelectedHour] = useState("");
-  const [selectedPeriod, setSelectedPeriod] = useState<
-    CustomInputTextEnum | ""
-  >("");
+  const [selectedPeriod, setSelectedPeriod] = useState<CustomInputTextEnum | "">("");
 
   const dateObj = selectedDate ? new Date(selectedDate) : null;
   const isChristmas =
-    dateObj?.getMonth() === CHRISTMAS_MONTH &&
-    dateObj?.getDate() === CHRISTMAS_DATE;
+    dateObj?.getMonth() === CHRISTMAS_MONTH && dateObj?.getDate() === CHRISTMAS_DATE;
 
   useEffect(() => {
     setSelectedHour("");
@@ -99,13 +87,10 @@ export const useTimeInput = (selectedDate?: string) => {
     return set;
   }, [timeOptions]);
 
-  const handleTimeSelect = useCallback(
-    (hour: string, period: CustomInputTextEnum) => {
-      setSelectedHour(hour);
-      setSelectedPeriod(period);
-    },
-    []
-  );
+  const handleTimeSelect = useCallback((hour: string, period: CustomInputTextEnum) => {
+    setSelectedHour(hour);
+    setSelectedPeriod(period);
+  }, []);
 
   const handlePeriodSelect = useCallback(
     (period: CustomInputTextEnum) => {
@@ -116,9 +101,8 @@ export const useTimeInput = (selectedDate?: string) => {
       }
 
       const validOption =
-        timeOptions.find(
-          (t) => t.hour === selectedHour && t.period === period && !t.disabled
-        ) || timeOptions.find((t) => t.period === period && !t.disabled);
+        timeOptions.find((t) => t.hour === selectedHour && t.period === period && !t.disabled) ||
+        timeOptions.find((t) => t.period === period && !t.disabled);
 
       if (!validOption) return;
 

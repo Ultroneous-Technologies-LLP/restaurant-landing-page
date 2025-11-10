@@ -5,12 +5,7 @@ import { FC } from "react";
 
 import { TitleProps } from "./types";
 
-export const Title: FC<TitleProps> = ({
-  as = "h2",
-  isMainTitle = false,
-  title,
-  className,
-}) => {
+export const Title: FC<TitleProps> = ({ as = "h2", isMainTitle = false, title, className }) => {
   const Component = isMainTitle ? "h1" : as;
 
   const baseStyle = "font-eugusto";
