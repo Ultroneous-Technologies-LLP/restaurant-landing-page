@@ -1,13 +1,13 @@
 export interface Dish {
-  id: number;
-  title: string;
-  description: string;
-  price: string;
-  image: string;
   alt: string;
+  description: string;
+  id: number;
+  image: string;
+  price: string;
+  title: string;
 }
 
 export interface MostPopularDishesProps {
-  title: string;
   dishes: Dish[];
+  title: string;
 }

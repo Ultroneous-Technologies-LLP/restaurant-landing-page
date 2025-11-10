@@ -5,10 +5,10 @@ interface Src {
 }
 
 interface BackgroundImage {
-  desktopImage: Src;
-  tabImage: Src;
-  mobileImage: Src;
   alt: string;
+  desktopImage: Src;
+  mobileImage: Src;
+  tabImage: Src;
 }
 
 interface Button {
@@ -18,12 +18,12 @@ interface Button {
 
 export interface HeroSectionProps {
   backgroundImage: BackgroundImage;
-  heading: string;
-  description: string;
-  chefs: ImageTypes[];
-  extraChefCount?: number;
-  storyImage: ImageTypes;
   bottomImage: ImageTypes;
-  menuImage: ImageTypes;
   button: Button;
+  chefs: ImageTypes[];
+  description: string;
+  heading: string;
+  menuImage: ImageTypes;
+  storyImage: ImageTypes;
+  extraChefCount?: number;
 }
