@@ -1,13 +1,19 @@
-import { SVGProps } from "react";
+import { JSX, SVGProps } from "react";
 
-export const PlayButton = ({ width = 18, height = 20, ...svgProps }: SVGProps<SVGSVGElement>) => (
+import { ICON_SIZE_0, ICON_SIZE_18, ICON_SIZE_20 } from "./constant";
+
+export const PlayButton = ({
+  width = ICON_SIZE_18,
+  height = ICON_SIZE_20,
+  ...svgProps
+}: SVGProps<SVGSVGElement>): JSX.Element => (
   <svg
-    width={width}
-    height={height}
-    viewBox="0 0 18 20"
-    xmlns="http://www.w3.org/2000/svg"
     fill="none"
+    height={height}
     role="img"
+    viewBox={`${ICON_SIZE_0} ${ICON_SIZE_0} ${ICON_SIZE_18} ${ICON_SIZE_20}`}
+    width={width}
+    xmlns="http://www.w3.org/2000/svg"
     {...svgProps}
   >
     <path
