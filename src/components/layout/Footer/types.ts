@@ -1,7 +1,4 @@
-import { ImageTypes } from "@/types";
-
-export type SocialIconNameType = "Dribble" | "Instagram" | "BeHance" | "LinkedIn";
-
+import { ImageTypes, SocialIconNameType } from "@/types";
 interface SocialLink {
   id: number;
   href: string;

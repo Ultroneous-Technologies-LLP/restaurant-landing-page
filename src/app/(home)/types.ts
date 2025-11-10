@@ -1,4 +1,5 @@
 import {
+  FooterProps,
   AnyPlanProps,
   EatingWellProps,
   ExtraordinaryExperienceProps,
@@ -7,20 +8,19 @@ import {
   OurSpecialMenuProps,
   QualityComesProps,
   TestimonialProps,
-} from "@/components/home";
-import { FooterProps } from "@/components/layout";
+} from "@/components";
 
 export interface LayoutProps {
   footer: FooterProps;
 }
 
-export interface homePageProps {
-  heroSection: HeroSectionProps;
-  eatingWellSection: EatingWellProps;
-  qualityComesSection: QualityComesProps;
-  mostPopularDishesSection: MostPopularDishesProps;
-  extraordinaryExperienceSection: ExtraordinaryExperienceProps;
-  ourSpecialMenuSection: OurSpecialMenuProps;
+export interface HomePageProps {
   anyPlanSection: AnyPlanProps;
+  eatingWellSection: EatingWellProps;
+  extraordinaryExperienceSection: ExtraordinaryExperienceProps;
+  heroSection: HeroSectionProps;
+  mostPopularDishesSection: MostPopularDishesProps;
+  ourSpecialMenuSection: OurSpecialMenuProps;
+  qualityComesSection: QualityComesProps;
   testimonialsSection: TestimonialProps;
 }

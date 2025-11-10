@@ -1,4 +1,5 @@
-import data from "@/content/home-page-layout.json";
+import { FC, PropsWithChildren } from "react";
+
 import {
   AnyPlan,
   EatingWell,
@@ -9,10 +10,11 @@ import {
   QualityComes,
   Testimonials,
 } from "@/components/home";
+import data from "@/content/home-page-layout.json";
 
-import { homePageProps } from "./types";
+import { HomePageProps } from "./types";
 
-const Home = () => {
+const Home: FC<PropsWithChildren> = () => {
   const {
     heroSection,
     eatingWellSection,
@@ -22,7 +24,7 @@ const Home = () => {
     ourSpecialMenuSection,
     anyPlanSection,
     testimonialsSection,
-  }: homePageProps = data;
+  }: HomePageProps = data;
   return (
     <>
       <Hero {...heroSection} />
