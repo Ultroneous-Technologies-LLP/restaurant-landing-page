@@ -16,7 +16,7 @@ export const Title: FC<TitleProps> = ({ as = "h2", isMainTitle = false, title, c
   };
 
   return (
-    <Component className={clsx(baseStyle, variantStyles[Component], className)}>
+    <Component className={clsx(baseStyle, variantStyles[`${Component}`], className)}>
       <span>{title}</span>
     </Component>
   );
