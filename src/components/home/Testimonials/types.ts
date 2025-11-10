@@ -2,16 +2,16 @@ import type { Swiper as SwiperType } from "swiper";
 
 export interface CustomersSays {
   id: number;
+  img: string;
   name: string;
   role: string;
-  img: string;
   text: string;
 }
 
 export interface CardProps {
   data: CustomersSays[];
-  swiperRef?: React.RefObject<SwiperType | null>;
   className?: string;
+  swiperRef?: React.RefObject<SwiperType | null>;
 }
 
 export interface TestimonialsSliderProps {
@@ -19,8 +19,8 @@ export interface TestimonialsSliderProps {
 }
 
 export interface TestimonialProps {
-  title: string;
+  customersSays: CustomersSays[];
   description: string;
   longDescription: string;
-  customersSays: CustomersSays[];
+  title: string;
 }

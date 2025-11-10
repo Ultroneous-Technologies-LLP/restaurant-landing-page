@@ -6,16 +6,16 @@ interface Images {
 }
 
 export interface EatingWellCard {
-  id: number;
-  icon: ImageTypes;
-  title: string;
   description: string;
+  icon: ImageTypes;
+  id: number;
+  title: string;
 }
 
 export interface EatingWellProps {
-  images: Images;
-  heading: string;
-  description: string;
   cards: EatingWellCard[];
   cta: CtaButtonType;
+  description: string;
+  heading: string;
+  images: Images;
 }
