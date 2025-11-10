@@ -6,8 +6,8 @@ interface InputsTypes {
 }
 
 interface CustomInputs {
-  party: InputsTypes;
   date: InputsTypes;
+  party: InputsTypes;
   time: InputsTypes;
 }
 
@@ -17,11 +17,11 @@ interface DinnerServices {
 }
 
 export interface ModalProps {
+  ctaButton: CtaButtonType;
+  customInputs: CustomInputs;
+  description: string;
+  dinnerServices: DinnerServices;
   isOpen: boolean;
   onClose: () => void;
   title: string;
-  description: string;
-  customInputs: CustomInputs;
-  ctaButton: CtaButtonType;
-  dinnerServices: DinnerServices;
 }

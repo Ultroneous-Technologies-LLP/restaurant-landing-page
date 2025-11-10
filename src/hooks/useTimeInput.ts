@@ -81,7 +81,9 @@ export const useTimeInput = (selectedDate?: string) => {
     const set = new Set<CustomInputTextEnum>();
 
     for (const t of timeOptions) {
-      if (!t.disabled) set.add(t.period);
+      if (!t.disabled) {
+        set.add(t.period);
+      }
     }
 
     return set;
@@ -94,7 +96,9 @@ export const useTimeInput = (selectedDate?: string) => {
 
   const handlePeriodSelect = useCallback(
     (period: CustomInputTextEnum) => {
-      if (!selectedHour) return;
+      if (!selectedHour) {
+        return;
+      }
       if (isChristmas) {
         setSelectedPeriod(period);
         return;
@@ -104,7 +108,9 @@ export const useTimeInput = (selectedDate?: string) => {
         timeOptions.find((t) => t.hour === selectedHour && t.period === period && !t.disabled) ||
         timeOptions.find((t) => t.period === period && !t.disabled);
 
-      if (!validOption) return;
+      if (!validOption) {
+        return;
+      }
 
       setSelectedHour(validOption.hour);
       setSelectedPeriod(validOption.period);
