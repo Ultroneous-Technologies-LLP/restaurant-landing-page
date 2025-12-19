@@ -5,9 +5,9 @@ export type SocialIconNameType = "Dribble" | "Instagram" | "BeHance" | "LinkedIn
 type ButtonVariants = "primary" | "outline";
 
 export interface ImageTypes {
+  alt: string;
   id: number;
   src: string;
-  alt: string;
 }
 
 export interface CtaButtonType {

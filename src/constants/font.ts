@@ -1,5 +1,5 @@
-import localFont from "next/font/local";
 import { Inter, Jomolhari } from "next/font/google";
+import localFont from "next/font/local";
 
 export const proximaNova = localFont({
   src: [
