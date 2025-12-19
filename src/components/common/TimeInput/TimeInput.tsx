@@ -66,19 +66,20 @@ export const TimeInput: FC<TimeInputProps> = ({ label, placeholder, selectedDate
           <div className="shadow-custom absolute top-12.5 left-4 z-50 mt-2 w-full max-w-50 overflow-hidden rounded-lg bg-white">
             <div className="grid max-h-45 grid-cols-2 items-start overflow-y-auto">
               <div className="space-y-1 p-2">
-                {timeOptions.map(({ key, hour, period, disabled }) => {
+                {timeOptions.map(({ key, hour, period, isDisabled }) => {
                   const isSelected = selectedHour === hour && selectedPeriod === period;
-                  const isDisabled = disabled && !isChristmas;
+                  const isFinalDisabled = isDisabled && !isChristmas;
 
                   let timeClass = "";
 
-                  if (isDisabled) {
+                  if (isFinalDisabled) {
                     timeClass = "cursor-not-allowed text-gray-400";
                   } else if (isSelected) {
                     timeClass = "text-primary-red bg-[#FDF0EE] font-semibold";
                   } else {
                     timeClass = "hover:bg-seashell cursor-pointer";
                   }
+
                   return (
                     <div
                       className={`font-inter rounded p-2 text-center text-sm transition-all duration-300 ${timeClass}`}
