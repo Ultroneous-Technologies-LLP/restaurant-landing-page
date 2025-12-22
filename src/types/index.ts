@@ -14,8 +14,10 @@ export interface CtaButtonType {
   label: string;
   href?: string;
 }
-export interface ButtonProps
-  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className" | "children"> {
+export interface ButtonProps extends Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  "className" | "children"
+> {
   children: ReactNode;
   className?: string;
   variant?: ButtonVariants;
