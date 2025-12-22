@@ -11,7 +11,7 @@ export const Title: FC<TitleProps> = ({ as = "h2", isMainTitle = false, title, c
   const baseStyle = "font-eugusto";
 
   const variantStyles = {
-    h1: "text-5xl/12 lg:text-7xl/18 xl:text-[100px]/30 text-white max-w-77.5 xl:max-w-166 w-full xl:pt-9 mx-auto md:pl-7.5 xl:pl-0",
+    h1: "text-5xl/12 lg:text-7xl/18 xl:text-[100px]/30 text-white max-w-77.5 md:max-w-87.5 xl:max-w-166 w-full xl:pt-9 mx-auto md:pl-7.5 xl:pl-0",
     h2: "text-32px/12 xl:text-5xl/15 text-center",
   };
 

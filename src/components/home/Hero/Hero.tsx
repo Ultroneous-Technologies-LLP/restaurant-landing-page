@@ -62,13 +62,13 @@ export const Hero: FC<HeroSectionProps> = ({
                 </ModalButton>
               </div>
             </div>
-            <div className="absolute -top-4 -left-4 z-0 xl:-left-25">
+            <div className="absolute -top-4 -left-4 md:top-5 z-0 xl:-top-4 xl:-left-25">
               <Image
                 src={bottomImage.src}
                 alt={bottomImage.alt}
                 width={451}
                 height={195}
-                className="relative z-0 mx-auto w-40 md:w-60 xl:h-fit xl:w-fit"
+                className="relative z-0 mx-auto w-40 md:w-50 xl:h-fit xl:w-80"
               />
             </div>
           </div>
