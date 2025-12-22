@@ -3,25 +3,28 @@
 import { FC, useRef } from "react";
 import { Swiper as SwiperType } from "swiper";
 
-import { DoubleQuotes, LeftArrow } from "@/components/icons";
+import { DoubleQuotes, LeftArrow } from "@/components";
 
 import { Card } from "./Card";
 import { TestimonialsSliderProps } from "./types";
+
+const START_INDEX = 0;
+const DIVISOR_FOR_HALF = 2;
 
 export const TestimonialsSlider: FC<TestimonialsSliderProps> = ({ data }) => {
   const topSwiperRef = useRef<SwiperType>(null);
   const bottomSwiperRef = useRef<SwiperType>(null);
 
-  const mid = Math.ceil(data.length / 2);
-  const topData = data.slice(0, mid);
+  const mid = Math.ceil(data.length / DIVISOR_FOR_HALF);
+  const topData = data.slice(START_INDEX, mid);
   const bottomData = data.slice(mid);
 
-  const handlePrev = () => {
+  const handlePrev = (): void => {
     topSwiperRef.current?.slidePrev();
     bottomSwiperRef.current?.slidePrev();
   };
 
-  const handleNext = () => {
+  const handleNext = (): void => {
     topSwiperRef.current?.slideNext();
     bottomSwiperRef.current?.slideNext();
   };
@@ -30,16 +33,16 @@ export const TestimonialsSlider: FC<TestimonialsSliderProps> = ({ data }) => {
     <>
       {/* Top Slider Card */}
       <Card
+        className="mb-8 md:absolute md:-top-11 md:left-5 md:mb-0 xl:top-0 xl:left-0"
         data={topData}
         swiperRef={topSwiperRef}
-        className="mb-8 md:absolute md:-top-11 md:left-5 md:mb-0 xl:top-0 xl:left-0"
       />
 
       {/* Bottom Slider Card */}
       <Card
+        className="mb-8 md:absolute md:right-7 md:-bottom-19.5 md:mb-0 xl:right-0 xl:bottom-0"
         data={bottomData}
         swiperRef={bottomSwiperRef}
-        className="mb-8 md:absolute md:right-7 md:-bottom-19.5 md:mb-0 xl:right-0 xl:bottom-0"
       />
 
       {/* Button */}

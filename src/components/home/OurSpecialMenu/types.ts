@@ -1,10 +1,10 @@
 import { ImageTypes } from "@/types";
 
 interface TabItem {
-  id: number;
-  title: string;
   description: string;
+  id: number;
   price: string;
+  title: string;
 }
 
 interface TabContent {
@@ -13,9 +13,9 @@ interface TabContent {
 }
 
 export interface TabType {
+  content: TabContent;
   id: number;
   label: string;
-  content: TabContent;
 }
 
 export interface TabProps {
@@ -23,6 +23,6 @@ export interface TabProps {
 }
 
 export interface OurSpecialMenuProps {
-  title: string;
   tabs: TabType[];
+  title: string;
 }

@@ -1,13 +1,19 @@
-import { SVGProps } from "react";
+import { JSX, SVGProps } from "react";
 
-export const LinkedIn = ({ width = 18, height = 18, ...svgProps }: SVGProps<SVGSVGElement>) => (
+import { ICON_SIZE_0, ICON_SIZE_18 } from "./constant";
+
+export const LinkedIn = ({
+  width = ICON_SIZE_18,
+  height = ICON_SIZE_18,
+  ...svgProps
+}: SVGProps<SVGSVGElement>): JSX.Element => (
   <svg
-    width={width}
-    height={height}
-    viewBox="0 0 18 18"
-    xmlns="http://www.w3.org/2000/svg"
     fill="none"
+    height={height}
     role="img"
+    viewBox={`${ICON_SIZE_0} ${ICON_SIZE_0} ${ICON_SIZE_18} ${ICON_SIZE_18}`}
+    width={width}
+    xmlns="http://www.w3.org/2000/svg"
     {...svgProps}
   >
     <g clipPath="url(#clip0_4_2378)">
@@ -26,7 +32,7 @@ export const LinkedIn = ({ width = 18, height = 18, ...svgProps }: SVGProps<SVGS
     </g>
     <defs>
       <clipPath id="clip0_4_2378">
-        <rect width="18" height="18" fill="currentColor" />
+        <rect fill="currentColor" height={`${ICON_SIZE_18}`} width={`${ICON_SIZE_18}`} />
       </clipPath>
     </defs>
   </svg>

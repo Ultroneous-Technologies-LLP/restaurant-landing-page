@@ -8,47 +8,47 @@
     "navLinks": [
       {
         "id": 1,
-        "links": "/#home",
-        "title": "Home"
+        "href": "/#home",
+        "label": "Home"
       },
       {
         "id": 2,
-        "links": "/#menu",
-        "title": "Menu"
+        "href": "/#menu",
+        "label": "Menu"
       },
       {
         "id": 3,
-        "links": "/#blog",
-        "title": "Blog"
+        "href": "/#blog",
+        "label": "Blog"
       },
       {
         "id": 4,
-        "links": "/#contact",
-        "title": "Contact"
+        "href": "/#contact",
+        "label": "Contact"
       }
     ],
     "socialLinks": [
       {
         "id": 1,
-        "href": "https://dribbble.com",
+        "href": "https://dribbble.com/ultroneous",
         "label": "Visit our Dribbble profile",
         "icon": "Dribble"
       },
       {
         "id": 2,
-        "href": "https://instagram.com",
+        "href": "https://www.instagram.com/ultroneous.technologies/",
         "label": "Visit our Instagram profile",
         "icon": "Instagram"
       },
       {
         "id": 3,
-        "href": "https://behance.net",
+        "href": "https://www.behance.net/ultroneous",
         "label": "Visit our Behance profile",
         "icon": "BeHance"
       },
       {
         "id": 4,
-        "href": "https://linkedin.com",
+        "href": "https://in.linkedin.com/company/ultroneous",
         "label": "Visit our LinkedIn profile",
         "icon": "LinkedIn"
       }

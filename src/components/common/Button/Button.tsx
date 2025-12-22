@@ -12,13 +12,11 @@ export const Button: FC<ButtonProps> = ({ variant = "primary", className, childr
     outline: "border border-black rounded-4xl hover:bg-black hover:text-white w-full md:w-fit",
   };
 
-  const combinedClass = clsx(baseClass, variants[variant], className);
+  const combinedClass = clsx(baseClass, variants[`${variant}`], className);
 
   return (
-    <>
-      <button {...rest} className={combinedClass}>
-        {children}
-      </button>
-    </>
+    <button {...rest} className={combinedClass}>
+      {children}
+    </button>
   );
 };

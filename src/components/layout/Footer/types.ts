@@ -1,18 +1,12 @@
-import { ImageTypes } from "@/types";
-
-export type SocialIconNameType = "Dribble" | "Instagram" | "BeHance" | "LinkedIn";
-
-interface SocialLink {
-  id: number;
-  href: string;
-  label: string;
-  icon: SocialIconNameType;
-}
+import { ImageTypes, SocialIconNameType } from "@/types";
 
 interface NavLinks {
+  href: string;
   id: number;
-  links: string;
-  title: string;
+  label: string;
+}
+interface SocialLink extends NavLinks {
+  icon: SocialIconNameType;
 }
 
 export interface FooterProps {

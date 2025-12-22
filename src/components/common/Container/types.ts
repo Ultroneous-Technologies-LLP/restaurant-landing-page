@@ -6,9 +6,9 @@ export type SupportedTags = Extract<
 >;
 
 export type ContainerProps<T extends SupportedTags> = {
+  children: ReactNode | ReactElement[];
   as?: T;
   backgroundClassName?: string;
-  children: ReactNode | ReactElement[];
   className?: string;
   id?: string;
 } & ComponentPropsWithoutRef<T>;

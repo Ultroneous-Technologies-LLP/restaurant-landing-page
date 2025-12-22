@@ -8,26 +8,29 @@ import { Container } from "@/components/common";
 
 import { HeaderTextEnum } from "./enum";
 
+const SCROLL_Y_20 = 20;
+
 export const Header: FC = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = (): void => {
+      setIsScrolled(window.scrollY > SCROLL_Y_20);
+    };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return (): void => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
     <nav
+      aria-label="Main Navigation"
       className={clsx(
         "fixed top-0 left-1/2 z-50 mx-auto w-full -translate-x-1/2 transition-colors duration-700 ease-in-out",
-        {
-          "bg-transparent": !scrolled,
-          "bg-white/50 shadow-md backdrop-blur-[22px]": scrolled,
-        }
+        !isScrolled ? "bg-transparent" : "bg-white/50 shadow-md backdrop-blur-[22px]"
       )}
       role="navigation"
-      aria-label="Main Navigation"
     >
       <Container className="flex items-center justify-between px-4 py-2 md:pr-11.5 md:pl-8 xl:py-8 xl:pr-17 xl:pl-18">
         <p className="font-JomolHari text-lg/6 text-black md:text-3xl/6.5 xl:text-[40px]/10">

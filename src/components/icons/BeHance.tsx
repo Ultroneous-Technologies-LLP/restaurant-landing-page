@@ -1,13 +1,19 @@
-import { SVGProps } from "react";
+import { JSX, SVGProps } from "react";
 
-export const BeHance = ({ width = 18, height = 12, ...svgProps }: SVGProps<SVGSVGElement>) => (
+import { ICON_SIZE_0, ICON_SIZE_12, ICON_SIZE_18 } from "./constant";
+
+export const BeHance = ({
+  width = ICON_SIZE_18,
+  height = ICON_SIZE_12,
+  ...svgProps
+}: SVGProps<SVGSVGElement>): JSX.Element => (
   <svg
-    width={width}
-    height={height}
-    viewBox="0 0 18 12"
-    xmlns="http://www.w3.org/2000/svg"
     fill="none"
+    height={height}
     role="img"
+    viewBox={`${ICON_SIZE_0} ${ICON_SIZE_0} ${ICON_SIZE_18} ${ICON_SIZE_12}`}
+    width={width}
+    xmlns="http://www.w3.org/2000/svg"
     {...svgProps}
   >
     <path
