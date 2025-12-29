@@ -23,7 +23,6 @@ const Home = () => {
     anyPlanSection,
     testimonialsSection,
   }: homePageProps = data;
-  console.log("hello")
   return (
     <>
       <Hero {...heroSection} />
