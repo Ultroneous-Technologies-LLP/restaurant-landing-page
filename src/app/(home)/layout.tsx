@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
-import data from "@/content/layout.json";
+import SmoothScroll from "@/components/common/SmoothScroll";
 import { eugusto, inter, jomolHari, proximaNova } from "@/constants";
+import data from "@/content/layout.json";
 import { Footer, Header, SocialIconNameType } from "@/components/layout";
 
 import "../../styles/globals.css";
@@ -52,9 +53,11 @@ export default function RootLayout({
       <body
         className={`${jomolHari.variable} ${inter.variable} ${proximaNova.variable} ${eugusto.variable} antialiased`}
       >
-        <Header />
-        {children}
-        <Footer {...footer} />
+        <SmoothScroll>
+          <Header />
+          {children}
+          <Footer {...footer} />
+        </SmoothScroll>
       </body>
     </html>
   );
